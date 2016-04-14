@@ -8,7 +8,9 @@ var gulp = require('gulp'),
     twig = require('gulp-twig'),
     resumePdfToJson = require('resume-pdf-to-json'),
     htmlreplace = require('gulp-html-replace'),
-    fs = require('fs');
+    fs = require('fs')
+    path = require('path'),
+    extend = require('util')._extend;
 
 
 /**
@@ -41,31 +43,42 @@ function templates() {
 
     var service = this;
 
-    service.matter = m;
-    service.pdftojson = pj;
+    service.matter = matterservice;
+    service.pdftojson = pdftojsonservice;
     service.site = site;
 
     var src = [
         'site/*.twig',
-        '!site/resume.twig'
+        '!site/resume.twig' // temp
     ];
 
 
-    function site(data) {
-        var d = fs.readFileSync(DATA + 'site.json', 'utf8');
-        data.site = JSON.parse(d);
+    function site(data, file) {
+        try {
+            var f = file || 'site';
+            var d = fs.readFileSync(DATA + f + '.json', 'utf8');
+            if (f === 'site') {
+                data[f] = JSON.parse(d);
+            } else {
+                data = extend(data, JSON.parse(d));
+            }
+        } catch(e) {}
         return data;
     }
 
-    function m(file) {
+    function matterservice(file) {
         var m = matter(String(file.contents));
-        file.contents = new Buffer(m.content);
+        var name = path.basename(file.path).split('.')[0];
+        var data = service.site(m.data);
+        // file.contents = new Buffer(m.content);
         // get site data
-        m.data = service.site(m.data);
-        return m.data;
+        // m.data = service.site(m.data);
+        // get page data if it exits
+        data = service.site(data, name);
+        return data;
     }
 
-    function pj(file) {
+    function pdftojsonservice(file) {
 
         var path = DATA + 'DevonHirth.pdf';
         var output = DATA + 'DevonHirth.json';

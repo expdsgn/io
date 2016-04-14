@@ -1,25 +1,4 @@
----
-title: Home
-text:
-    <p>I am a design technologist pushing positive mission driven projects forward with visual design and web technology specializing in identity design, interface design, front-end web development, and data visualization.</p>
-    <p>Experiences are moments facilitated by design. Often these moments are solutions to problems – created to help us live more fulfilling lives.</p>
 
-CAP0: Identity Design
-CAP0_TEXT: <p>Your visual identity embodies your mission and vision and is key to formalizing your company and engaging your audience.<p>
-CAP0_LINK: http://bit.ly/1VOlUU7
-
-CAP1: Interface Design
-CAP1_TEXT: <p>Interfaces are unique and usable experiences that meet your audience’s needs embedded with your mission and vision.</p>
-CAP1_LINK: http://bit.ly/1Sc5vJL
-
-CAP2: Front-end<br>Development
-CAP2_TEXT: <p>Front-end development is the crafting of your experience using the latest standards in web technology and accessibility.</p>
-CAP2_LINK: http://bit.ly/1oRQNtD
-
-CAP3: Data Visualization
-CAP3_TEXT: <p>Data drives your organization and visualizations communicate complex ideas and identify patterns to all of your stakeholders.</p>
-CAP3_LINK: http://bit.ly/1Sc5UvU
----
 
 {% extends "templates/base/home.twig" %}
 
@@ -135,21 +114,15 @@ CAP3_LINK: http://bit.ly/1Sc5UvU
 
                     <div class="col3 col6@medium col12@small va-top t-left">
 
+                        {% for i in range(0, 1) %}
                         <div class="card add-bottom-3x pad-bottom-3x">
                             <div class="card_wrap@216x">
-                                <h3 class="height@48x">{{CAP0}}</h3>
-                                <div class="fs-small height@120x pad-right">{{CAP0_TEXT}}</div>
-                                <a class="c-red" href="{{CAP0_LINK}}" rel="nofollow" title="{{CAP0}} Examples">See Examples on Behance</a>
+                                <h3 class="height@48x">{{capabilities[i].name}}</h3>
+                                <div class="fs-small height@120x pad-right">{{capabilities[i].text}}</div>
+                                <a class="c-red" href="{{capabilities[i].link}}" rel="nofollow" title="{{capabilities[i].name}} Examples">See Examples on Behance</a>
                             </div>
                         </div>
-
-                        <div class="card add-bottom-3x pad-bottom-3x">
-                            <div class="card_wrap@216x">
-                                <h3 class="height@48x">{{CAP2}}</h3>
-                                <div class="fs-small height@120x pad-right">{{CAP2_TEXT}}</div>
-                                <a class="c-red" href="{{CAP2_LINK}}" rel="nofollow" title="{{CAP2}} Examples">See Examples on Behance</a>
-                            </div>
-                        </div>
+                        {% endfor %}
 
                     </div>
 
@@ -165,21 +138,15 @@ CAP3_LINK: http://bit.ly/1Sc5UvU
 
                     <div class="col3 col6@medium col12@small t-left">
 
+                        {% for i in range(2, 3) %}
                         <div class="card add-bottom-3x pad-bottom-3x">
                             <div class="card_wrap@216x">
-                                <h3 class="height@48x">{{CAP1}}</h3>
-                                <div class="fs-small height@120x">{{CAP1_TEXT}}</div>
-                                <a class="c-red" href="{{CAP1_LINK}}" rel="nofollow" title="{{CAP1}} Examples">See Examples on Behance</a>
+                                <h3 class="height@48x">{{capabilities[i].name}}</h3>
+                                <div class="fs-small height@120x pad-right">{{capabilities[i].text}}</div>
+                                <a class="c-red" href="{{capabilities[i].link}}" rel="nofollow" title="{{capabilities[i].name}} Examples">See Examples on Behance</a>
                             </div>
                         </div>
-
-                        <div class="card">
-                            <div class="card_wrap@216x">
-                                <h3 class="height@48x">{{CAP3}}</h3>
-                                <div class="fs-small height@120x">{{CAP3_TEXT}}</div>
-                                <a class="c-red" href="{{CAP3_LINK}}" rel="nofollow" title="{{CAP3}} Examples">See Examples on Behance</a>
-                            </div>
-                        </div>
+                        {% endfor %}
 
                     </div>
 

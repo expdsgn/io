@@ -1,0 +1,26 @@
+{
+    "title": "Home",
+    "text": "<p>I am a design technologist pushing positive mission driven projects forward with visual design and web technology specializing in identity design, interface design, front-end web development, and data visualization.</p><p>Experiences are moments facilitated by design. Often these moments are solutions to problems – created to help us live more fulfilling lives.</p>",
+    "capabilities": [
+        {
+            "name": "Identity Design",
+            "text": "<p>Your visual identity embodies your mission and vision and is key to formalizing your company and engaging your audience.<p>",
+            "link": "http://bit.ly/1VOlUU7"
+        },
+        {
+            "name": "Interface Design",
+            "text": "<p>Interfaces are unique and usable experiences that meet your audience’s needs embedded with your mission and vision.</p>",
+            "link": "http://bit.ly/1Sc5vJL"
+        },
+        {
+            "name": "Front-end<br>Development",
+            "text": "<p>Front-end development is the crafting of your experience using the latest standards in web technology and accessibility.</p>",
+            "link": "http://bit.ly/1oRQNtD"
+        },
+        {
+            "name": "Data Visualization",
+            "text": "<p>Data drives your organization and visualizations communicate complex ideas and identify patterns to all of your stakeholders.</p>",
+            "link": "http://bit.ly/1Sc5UvU"
+        }
+    ]
+}
