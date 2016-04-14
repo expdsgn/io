@@ -40,6 +40,12 @@ function watch() {
 
 gulp.task('watch', watch);
 
+gulp.task('build', [
+    'templates',
+    'patterns',
+    'patterns:fonts'
+]);
+
 gulp.task('default', [
     'watch'
 ]);

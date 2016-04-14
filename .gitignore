@@ -22,8 +22,9 @@ CVS
 *.key
 *.pem
 
-#
+# builds and temp files
 surge/*
 temp/*
 
+# npm
 src/node_modules/*
