@@ -1,0 +1,198 @@
+---
+title: Home
+text:
+    <p>I am a design technologist pushing positive mission driven projects forward with visual design and web technology specializing in identity design, interface design, front-end web development, and data visualization.</p>
+    <p>Experiences are moments facilitated by design. Often these moments are solutions to problems – created to help us live more fulfilling lives.</p>
+
+CAP0: Identity Design
+CAP0_TEXT: <p>Your visual identity embodies your mission and vision and is key to formalizing your company and engaging your audience.<p>
+CAP0_LINK: http://bit.ly/1VOlUU7
+
+CAP1: Interface Design
+CAP1_TEXT: <p>Interfaces are unique and usable experiences that meet your audience’s needs embedded with your mission and vision.</p>
+CAP1_LINK: http://bit.ly/1Sc5vJL
+
+CAP2: Front-end<br>Development
+CAP2_TEXT: <p>Front-end development is the crafting of your experience using the latest standards in web technology and accessibility.</p>
+CAP2_LINK: http://bit.ly/1oRQNtD
+
+CAP3: Data Visualization
+CAP3_TEXT: <p>Data drives your organization and visualizations communicate complex ideas and identify patterns to all of your stakeholders.</p>
+CAP3_LINK: http://bit.ly/1Sc5UvU
+---
+
+{% extends "templates/base/home.twig" %}
+
+
+{% block content %}
+<section class="bg-white c-blue@s1">
+
+    <div class="wrap-mid0 wrap-min@min">
+
+        <div class="vh-100 d-flex fa-center">
+
+            <div class="shim@24x animated fadeInUp">
+
+                <div class="pad-horizontal@2x add-horizontal-3x add-right@small add-left@small pad-right@small pad-left@small">
+
+                    <h1 class="pad-right pad-right-3x@medium">
+                        <span class="hidden">{{site.title}}</span>
+                        {% include 'icons/svg/expdesign.logo.twig' with {'color':'blue@s1'} %}
+                    </h1>
+
+                    <div class="fs-large">{{text}}</div>
+
+                </div>
+
+                <div class="t-center shim@48x">
+
+                    <div class="add-bottom-2x">
+
+                        <div class="d-none@medium d-block@large">
+
+                            <label class="btn btn-large btn-flush@right c-red b-red" for="formHire">
+
+                                <span class="add-right-2x">Contact</span>
+
+                            </label><span class="btn btn-large btn-flush@right btn-flush@left c-red inherit">
+                                &nbsp;<span class="c-blue@s1">o</span>
+                            </span><span class="btn btn-large btn-flush@right btn-flush@left inherit">
+                                <span class="">r</span>&nbsp;
+
+                            </span><label class="btn btn-large btn-flush@left c-blue@s1 b-blue@s1" for="formSignup">
+
+                                <span class="add-left-2x">Stay in Touch</span>
+
+                            </label>
+
+                        </div>
+
+                        <div class="d-none d-block@medium">
+
+                            <label class="btn btn-large c-red b-red" for="formHire">
+                                Contact
+                            </label>
+
+                            <div class="pad">or</div>
+
+                            <label class="btn btn-large c-blue@s1 b-blue@s1" for="formSignup">
+                                Stay in Touch
+                            </label>
+
+                        </div>
+
+
+
+                    </div>
+
+                    {{examples}}
+
+                    <nav class="nav c-red">
+                        {% for s in site.social %}
+                        <a href="{{s[2]}}{{s[0]}}" title="{{site.title}} on {{s[1]}}" rel="nofollow">{{s[1]}}</a>
+                        {% endfor %}
+                    </nav>
+
+                </div>
+
+                <div class="shim@84x"></div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="capabilities" class="bg-white c-blue@s1">
+
+    <div class="wrap-max">
+
+        <div class="vh-100 d-flex fa-center">
+
+            <div class="w-100">
+
+                <h2 class="t-center">Capabilities</h2>
+
+                <div class="row t-center pad-top@3x pad-bottom d-none d-block@medium">
+
+                    <div class="col12">
+
+                        <div class="pad-horizontal-3x add-right@small add-left@small pad-right@small pad-left@small">
+
+                            {% include 'icons/svg/capabilities.twig' %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row t-center add-vertical-3x pad-vertical-3x add-top@medium">
+                    {% spaceless %}
+
+                    <div class="col3 col6@medium col12@small va-top t-left">
+
+                        <div class="card add-bottom-3x pad-bottom-3x">
+                            <div class="card_wrap@216x">
+                                <h3 class="height@48x">{{CAP0}}</h3>
+                                <div class="fs-small height@120x pad-right">{{CAP0_TEXT}}</div>
+                                <a class="c-red" href="{{CAP0_LINK}}" rel="nofollow" title="{{CAP0}} Examples">See Examples on Behance</a>
+                            </div>
+                        </div>
+
+                        <div class="card add-bottom-3x pad-bottom-3x">
+                            <div class="card_wrap@216x">
+                                <h3 class="height@48x">{{CAP2}}</h3>
+                                <div class="fs-small height@120x pad-right">{{CAP2_TEXT}}</div>
+                                <a class="c-red" href="{{CAP2_LINK}}" rel="nofollow" title="{{CAP2}} Examples">See Examples on Behance</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col6 d-none@medium">
+
+                        <div class="pad-left-3x pad-right-3x">
+
+                            {% include 'icons/svg/capabilities.twig' %}
+
+                        </div>
+
+                    </div>
+
+                    <div class="col3 col6@medium col12@small t-left">
+
+                        <div class="card add-bottom-3x pad-bottom-3x">
+                            <div class="card_wrap@216x">
+                                <h3 class="height@48x">{{CAP1}}</h3>
+                                <div class="fs-small height@120x">{{CAP1_TEXT}}</div>
+                                <a class="c-red" href="{{CAP1_LINK}}" rel="nofollow" title="{{CAP1}} Examples">See Examples on Behance</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card_wrap@216x">
+                                <h3 class="height@48x">{{CAP3}}</h3>
+                                <div class="fs-small height@120x">{{CAP3_TEXT}}</div>
+                                <a class="c-red" href="{{CAP3_LINK}}" rel="nofollow" title="{{CAP3}} Examples">See Examples on Behance</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {% endspaceless %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

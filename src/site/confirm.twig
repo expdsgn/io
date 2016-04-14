@@ -1,0 +1,16 @@
+---
+title: Your Message Was Sent
+text: <p>A response to your email will be sent soon.<br>Thank you for getting in touch!</p>
+---
+
+{% extends "templates/base/page.twig" %}
+
+{% block content %}
+
+{{text}}
+ 
+<nav>
+    <a href="/">Home</a>
+</nav>
+
+{% endblock %}

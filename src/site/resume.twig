@@ -1,0 +1,33 @@
+---
+title: Resume
+---
+
+{% extends "templates/base/page.twig" %}
+
+
+{% block content %}
+
+    {% for r in resume %}
+
+        <h2>{{r.head[0]}}</h2>
+        <p>{{r.head[1]}} {{r.head[2]}}</p>
+
+        {% if r.text is iterable %}
+        <ul>
+            {% for t in r.text %}
+            <li>{{t}}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>{{r.text}}</p>
+        {% endif %}
+
+        {% for s in r.sections %}
+        <h3>{{s.head[0]}}</h3>
+        <p>{{s.head[1]}} {{s.head[2]}}</p>
+        <p>{{s.text}}</p>
+        {% endfor %}
+
+    {% endfor %}
+
+{% endblock %}

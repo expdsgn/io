@@ -1,0 +1,30 @@
+/**
+ * Dependencies
+ */
+
+@require 'grid.vars.styl';
+
+
+/**
+ *
+ */
+
+.t-center
+    text-align center
+
+.t-left
+    text-align left
+
+.t-right
+    text-align right
+
+for _b, b in breaks
+    @media only screen and (max-width : b)
+        .t-center{'\@'}{_b}
+            text-align center
+
+        .t-left{'\@'}{_b}
+            text-align left
+
+        .t-right{'\@'}{_b}
+            text-align right

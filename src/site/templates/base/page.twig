@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    {% include '../components/head.twig' %}
+
+    <body>
+
+        {% include '../components/header.twig' %}
+
+        <div class="bg-white c-blue@s1">
+
+            <div class="wrap-mid0 wrap-min@min">
+
+                <div class="vh-100 d-flex fa-center">
+
+                    <div class="shim@84x animated fadeInUp">
+
+                        <h1>{{title}}</h1>
+
+                        {% block content %}{% endblock %}
+
+                        <div class="shim@84x"></div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% include '../components/contact.twig' %}
+
+        {% include '../components/footer.twig' %}
+
+    </body>
+
+</html>

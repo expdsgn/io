@@ -1,0 +1,127 @@
+/**
+ * Dependencies
+ */
+
+@require 'colors.vars.styl';
+
+
+/**
+ * Mixins
+ */
+
+bg-selector(_name, _rgb, _alpha = 1)
+
+    _r = red(_rgb)
+    _g = green(_rgb)
+    _b = blue(_rgb)
+
+    if lightness(_rgb) < 70
+        _c = neutrals['white'];
+    else
+        _c = neutrals['black'];
+
+    _bg = rgba(_r, _g, _b, _alpha);
+
+    .bg-{_name}
+        color _c
+        background-color _bg
+        border-color darken(_bg, 18%)
+
+    .bg-{_name} a:not(.btn):not(.inherit)
+        border-bottom 2px solid gethsl(_bg, bglinks)
+        box-shadow inset 0 -8px 0 gethsl(_bg, bglinks)
+
+    .bg-{_name} input:focus,
+    .bg-{_name} textarea:focus
+        background-color gethsl(_bg, bglinks)
+
+    input.bg-{_name}:focus,
+    textarea.bg-{_name}:focus
+        background-color gethsl(_bg, bglinks) !important
+
+    .bg-{_name + '\@'}striped {
+        background-size: 12px 12px;
+        background-image: linear-gradient(
+            45deg,
+            _bg 25%,
+            transparent 25%,
+            transparent 50%,
+            _bg 50%,
+            _bg 75%,
+            transparent 75%,
+            transparent
+        );
+    }
+
+
+gethsl(_rgb, _trans)
+    hsl(
+        hue(_rgb) + _trans['h'],
+        saturation(_rgb) + _trans['s'],
+        lightness(_rgb) + _trans['l']
+    )
+
+
+gethsllinks(_rgb, _trans)
+    hsl(
+        hue(_rgb) + _trans['h'],
+        saturation(_rgb) + _trans['s'],
+        _trans['l']
+    )
+
+
+transparencies(_name, _rgb, _alphas = alphas)
+
+    for _n, _a in _alphas
+
+        _newname = _name + '\@' + _n
+
+        bg-selector(_newname, _rgb, _a)
+
+
+tintsandshades(_name, _rgb, _trans, bg = true, _alphas = alphas)
+
+    for _n, _t in _trans
+
+        _newname = _name + '\@' + _n
+
+        if bg
+            bg-selector(_newname, gethsl(_rgb, _t))
+            transparencies(_newname, gethsl(_rgb, _t), _alphas)
+        else
+            c-selector(_newname, gethsl(_rgb, _t))
+
+
+c-selector(_name, _rgb)
+
+    .c-{_name},
+    .c-{_name}-hover:hover
+        color _rgb
+
+    .c-{_name} .link,
+    .c-{_name} a:not(.btn):not(.inherit)
+        border-bottom 2px solid gethsllinks(_rgb, links)
+        box-shadow inset 0 -8px 0 gethsllinks(_rgb, links)
+
+    .c-{_name} .link:hover,
+    .c-{_name} a:not(.btn):not(.inherit):hover
+        border-bottom 2px solid gethsllinks(_rgb, links)
+        box-shadow inset 0 -8px 0 gethsllinks(_rgb, links)
+        background-color gethsllinks(_rgb, links)
+
+    .btn.c-{_name}{':not(.\@inherit)'}:hover
+        color white
+        background-color _rgb
+
+    .b-{_name},
+    .b-{_name}-hover:hover
+        border-color _rgb
+
+    .s-{_name},
+    .s-{_name}-hover:hover
+        stroke _rgb
+
+    .f-{_name},
+    .f-{_name}-hover:hover
+        fill _rgb
+

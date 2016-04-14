@@ -1,0 +1,72 @@
+/**
+ * Dependencies
+ */
+
+@require 'grid.vars.styl';
+@require 'fonts.vars.styl';
+@require 'fonts.mixins.styl';
+
+
+/**
+ * Tasks
+ */
+
+font-face('Siro Light', 'Siro-Light', normal, weight-light)
+font-face('Siro SemiBold', 'Siro-SemiBold', normal, weight-semibold)
+
+body
+    color color-base
+    {font-light}
+    {font-smooth}
+
+h1, .h1, h2, .h2, h3, .h3
+    {font-light}
+    // letter-spacing 0.025em
+    margin-bottom 20px
+
+h1, .h1
+    {font-light}
+    font-size 66px
+    line-height 66px
+
+h2, .h2
+    font-size 36px
+
+h3, .h3
+    {font-semibold}
+    font-size 20px
+    line-height 24px
+
+for i in (1..6)
+    * > h{i}:first-child
+        margin-top 0px
+
+input, button,
+select, textarea
+    {font-light}
+
+select, textarea, input
+    {font-aliased}
+
+body
+    font-size 16px
+    line-height 24px
+
+small
+    font-size 80%
+    // line-height: 26px;
+
+.fs-large
+    font-size 18px
+    line-height 28px
+
+.fs-small
+    font-size 13px
+    line-height 22px
+
+// for _b, b in breaks
+//     @media only screen and (max-width : b)
+//         body
+//             font-size 18px
+//             line-height 28px
+

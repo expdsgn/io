@@ -1,0 +1,44 @@
+{
+    "title": "exp. design",
+    "entity": "exp. design llc",
+    "url": "http://expdesign.io",
+    "description": "exp. design pushes positive mission driven projects forward with visual design and web technology.",
+    "keywords": "",
+    "author": "Devon Hirth",
+    "color": "#dd3335",
+    "favicons": "favicons/",
+    "hosts": ["expdesign.io"],
+    "google": {
+        "tracking_id": "UA-70488413-1"
+    },
+    "opengraph": {
+        "title": "exp. design",
+        "type": "website",
+        "url": "http://expdesign.io",
+        "image": "",
+        "imagetype": "",
+        "imageheight": "",
+        "imagewidth": "",
+        "description": "exp. design pushes positive mission driven projects forward with visual design and web technology.",
+        "sitename": "exp. design"
+    },
+    "twitter": {
+        "card": "summary_large_image",
+        "site": "@expdsgn",
+        "creator": "@expdsgn",
+        "title": "exp. design",
+        "description": "exp. design pushes positive mission driven projects forward with visual design and web technology.",
+        "image": ""
+    },
+    "contacts": {
+        "general": ["devon@expdesign.io", "Information"],
+        "phone": ["347.927.2397", "Phone Number"]
+    },
+    "social": {
+        "behance": ["expdesignio", "Behance", "https://www.behance.net/"],
+        "github": ["expdesignio", "Github", "https://github.com/"],
+        "linkedin": ["exp-", "LinkedIn", "https://www.linkedin.com/company/"],
+        "facebook": ["exp.page", "Facebook", "https://www.facebook.com/"],
+        "twitter": ["expdsgn", "Twitter", "https://twitter.com/"]
+    }
+}

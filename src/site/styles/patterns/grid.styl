@@ -1,0 +1,153 @@
+/**
+ * Dependencies
+ */
+
+@require 'grid.vars.styl';
+@require 'grid.mixins.styl';
+
+
+/**
+ * Styles
+ */
+
+.wrap, [class*='wrap-']
+    display block
+    margin-left auto
+    margin-right auto
+    padding-left margins
+    padding-right margins
+
+for _n, r in range
+    .wrap-{_n}
+        max-width r - (margins * 2)
+
+    .wrap-{_n}{'\@min'}
+        min-width r - (margins * 2)
+
+for c in (1..cols)
+    _w = (c / cols) * 100
+    .row > .col{c}
+        width _w * 1%
+
+for c in (1..cols)
+    _w = 100 / c
+    .row{'\@'}c{c} > .col
+        width _w * 1%
+
+.row > [class*='col'].inherit
+    width auto
+
+.row > [class*='col'],
+[class*='row-'] > .col
+    display inline-block
+    list-style none
+    box-sizing border-box
+    vertical-align middle
+
+.row-top > [class*='col']
+    vertical-align top
+
+.row-bottom > [class*='col']
+    vertical-align bottom
+
+.row
+    zoom 1
+    &:before, &:after
+        display table
+        content ''
+        line-height 0
+    &:after
+        clear both
+
+for s in (1..shims)
+    _i = maxheight - (s * 12)
+    .shim{'\@' + _i + 'x'}
+        border-top transparent _i * 1px solid
+
+    .height{'\@' + _i + 'x'}
+        min-height _i * 1px
+
+
+for _n, g in gutters
+    .add{_n}
+        margin{_n} g
+
+    .add{_n + '\-2x'}
+        margin{_n} g * 2
+
+    .add{_n + '\-3x'}
+        margin{_n} g * 3
+
+for m in (1..multiplier)
+    horizontalsverticals(margins, 'add', 'margin', m)
+
+.add-none
+    margin 0
+
+
+for _n, g in gutters
+    .pad{_n}
+        padding{_n} g
+
+    .pad{_n + '\-2x'}
+        padding{_n} g * 2
+
+    .pad{_n + '\-3x'}
+        padding{_n} g * 3
+
+for m in (1..multiplier)
+    horizontalsverticals(margins, 'pad', 'padding', m)
+
+.pad-none
+    padding 0
+
+
+for _b, b in breaks
+    @media only screen and (max-width : b)
+
+        for _n, r in range
+            .wrap-{_n}{'\@'}{_b}
+                max-width r - (margins * 2)
+
+        for c in (1..cols)
+            _w = 100 / c
+            .row{'\@'}c{c}{'\@'}{_b} > .col
+                width _w * 1%
+
+        for c in (1..cols)
+            _w = (c / cols) * 100
+            .row > .col{c}{'\@'}{_b}
+                width _w * 1%
+
+        for _n, g in gutters
+            .add{_n}{'\@'}{_b}
+                margin{_n} g
+
+            .add{_n + '\-2x'}{'\@'}{_b}
+                margin{_n} g * 2
+
+            .add{_n + '\-3x'}{'\@'}{_b}
+                margin{_n} g * 3
+
+            .add-none{'\@'}{_b}
+                margin 0
+
+            .pad{_n}{'\@'}{_b}
+                padding{_n} g
+
+            .pad{_n + '\-2x'}{'\@'}{_b}
+                padding{_n} g * 2
+
+            .pad{_n + '\-3x'}{'\@'}{_b}
+                padding{_n} g * 3
+
+            .pad-none{'\@'}{_b}
+                padding 0
+
+        for m in (1..multiplier)
+            horizontalsverticals(margins, 'add', 'margin', m, '\@' + _b)
+            horizontalsverticals(margins, 'pad', 'padding', m, '\@' + _b)
+
+
+
+

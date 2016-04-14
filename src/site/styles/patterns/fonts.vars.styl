@@ -1,0 +1,50 @@
+/**
+ * Dependencies
+ */
+
+@require 'colors.vars.styl';
+
+
+/**
+ * Variables
+ */
+
+weight-black = 800;
+weight-extrabold = 700;
+weight-bold = 600;
+weight-semibold = 500;
+weight-base = 400; // for regular, book, and alt variants
+weight-light = 300;
+weight-thin = 200;
+
+color-base = neutrals.black
+
+
+/**
+ * Blocks
+ */
+
+font-light = @block {
+    font-family: 'Siro Light'
+    font-weight: weight-light
+}
+
+font-semibold = @block {
+    font-family: 'Siro SemiBold'
+    font-weight: weight-bold
+}
+
+font-smooth = @block {
+    text-rendering: optimizeLegibility
+     -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+}
+
+font-aliased = @block {
+    -webkit-font-smoothing: subpixel-antialiased
+    -moz-osx-font-smoothing: auto
+}
+
+
+
+
