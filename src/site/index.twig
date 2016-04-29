@@ -4,80 +4,76 @@
 
 
 {% block content %}
-<section class="bg-white c-blue@s1">
+<section class="vh-100 d-flex fa-center bg-white c-blue@s1">
 
-    <div class="wrap-mid0 wrap-min@min">
+    <div class="wrap-mid1 wrap-mid0@medium">
 
-        <div class="vh-100 d-flex fa-center">
+        <div class="d-flex fa-center">
 
-            <div class="shim@24x animated fadeInUp">
+            <div class="w-100 animated fadeInUp">
 
-                <div class="pad-horizontal@2x add-horizontal-3x add-right@small add-left@small pad-right@small pad-left@small">
+                <div class="row row-top t-center">
 
-                    <h1 class="pad-right pad-right-3x@medium">
-                        <span class="hidden">{{site.title}}</span>
-                        {% include 'icons/svg/expdesign.logo.twig' with {'color':'blue@s1'} %}
-                    </h1>
+                    <div class="col4 col12@medium">
 
-                    <div class="fs-large">{{text}}</div>
+                        <div class="add-top pad-right-3x">
 
-                </div>
+                            <span class="hidden">{{site.title}}</span>
 
-                <div class="t-center shim@48x">
+                            {% include 'icons/svg/expdesign.logo.twig' with {'color':'red'} %}
 
-                    <div class="add-bottom-2x">
+                            <label class="btn btn-large c-red b-red d-block" for="formHire">
 
-                        <div class="d-none@medium d-block@large">
-
-                            <label class="btn btn-large btn-flush@right c-red b-red" for="formHire">
-
-                                <span class="add-right-2x">Contact</span>
-
-                            </label><span class="btn btn-large btn-flush@right btn-flush@left c-red inherit">
-                                &nbsp;<span class="c-blue@s1">o</span>
-                            </span><span class="btn btn-large btn-flush@right btn-flush@left inherit">
-                                <span class="">r</span>&nbsp;
-
-                            </span><label class="btn btn-large btn-flush@left c-blue@s1 b-blue@s1" for="formSignup">
-
-                                <span class="add-left-2x">Stay in Touch</span>
+                                <span>Available for Hire</span>
 
                             </label>
 
                         </div>
 
-                        <div class="d-none d-block@medium">
+                    {% spaceless %}</div>
 
-                            <label class="btn btn-large c-red b-red" for="formHire">
-                                Contact
-                            </label>
+                    <div class="col7 t-left col12@medium">{% endspaceless %}
 
-                            <div class="pad">or</div>
-
-                            <label class="btn btn-large c-blue@s1 b-blue@s1" for="formSignup">
-                                Stay in Touch
-                            </label>
-
-                        </div>
-
-
+                        <h1>{{text}}</h1>
 
                     </div>
 
-                    {{examples}}
+                    <div class="col11 pad-vertical-3x b-top b-bottom b-gray@t2">
 
-                    <nav class="nav c-red">
-                        {% for s in site.social %}
-                        <a href="{{s[2]}}{{s[0]}}" title="{{site.title}} on {{s[1]}}" rel="nofollow">{{s[1]}}</a>
-                        {% endfor %}
-                    </nav>
+                        <nav class="nav c-red">
+
+                            <a href="/#capabilities" title="Capabilities">Capabilities</a>
+
+                            <a href="/about" title="About">About</a>
+
+                            <a href="/portfolio" title="{{site.portfolio[1]}}">Portfolio</a>
+
+                            <a href="/resume" title="{{site.resume[1]}}">Resume</a>
+
+                        </nav>
+
+                    </div>
 
                 </div>
 
-                <div class="shim@84x"></div>
+
 
             </div>
 
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="pad-horizontal bg-white">
+
+    <div class="vh-100 d-flex fa-center bg-red">
+
+        <div class="wrap-mid1">
+
+            <blockquote class="bq-left">{{quote}}</blockquote>
 
         </div>
 
@@ -91,7 +87,7 @@
 
         <div class="vh-100 d-flex fa-center">
 
-            <div class="w-100">
+            <div class="w-100 shim@84x">
 
                 <h2 class="t-center">Capabilities</h2>
 

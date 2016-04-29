@@ -1,0 +1,35 @@
+{
+    "title": "Sitemap",
+    "sitemap": [
+        {
+            "title": "Home",
+            "url": "/",
+            "description": ""
+        },
+        {
+            "title": "About",
+            "url": "/about",
+            "description": ""
+        },
+        {
+            "title": "Capabilities",
+            "url": "/#capabilities",
+            "description": ""
+        },
+        {
+            "title": "Portfolio",
+            "url": "/portfolio",
+            "description": ""
+        },
+        {
+            "title": "Resume",
+            "url": "/resume",
+            "description": ""
+        },
+        {
+            "title": "Contact",
+            "url": "/contact",
+            "description": ""
+        }
+    ]
+}

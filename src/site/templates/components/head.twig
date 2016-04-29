@@ -2,15 +2,15 @@
 
     <meta charset="utf-8">
 
-    <title>{{site.title}}</title>
+    <title>{% if title %}{{title | lower}} // {% endif %}{{site.title}}</title>
 
-    <meta name="description" content="{{site.description}}"/>
+    <meta name="description" content="{{site.mission}}"/>
     <meta name="keywords" content="{{site.keywords}}"/>
     <meta name="author" content="{{site.author}}">
 
-    <meta property="og:title" content="{{site.opengraph.title}}"/>
+    <meta property="og:title" content="{% if title %}{{title | lower}} // {% endif %}{{site.opengraph.title}}"/>
     <meta property="og:type" content="{{site.opengraph.type}}"/>
-    <meta property="og:url" content="{{site.opengraph.url}}"/>
+    <meta property="og:url" content="{{site.opengraph.url}}{{route}}"/>
     <meta property="og:image" content="{{site.opengraph.image}}"/>
     <meta property="og:image:type" content="{{site.opengraph.imagetype}}" />
     <meta property="og:image:width" content="{{site.opengraph.imageheight}}"/>
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="{{site.twitter.card}}">
     <meta name="twitter:site" content="{{site.twitter.site}}">
     <meta name="twitter:creator" content="{{site.twitter.creator}}">
-    <meta name="twitter:title" content="{{site.twitter.title}}">
+    <meta name="twitter:title" content="{% if title %}{{title | lower}} // {% endif %}{{site.twitter.title}}">
     <meta name="twitter:description" content="{{site.twitter.description}}">
     <meta name="twitter:image" content="{{site.twitter.image}}">
 
@@ -58,8 +58,8 @@
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', '{{site.google.tracking_id}}', 'auto');
-            ga('send', 'pageview');
+            ga('create','{{site.google.tracking_id}}','auto');
+            ga('send','pageview');
         }
     </script>
 

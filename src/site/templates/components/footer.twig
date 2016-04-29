@@ -31,25 +31,37 @@
 
                 <div class="col2 pad-top col6@medium t-center@medium add-bottom@3x@medium">
 
-                    <nav class="nav">
-                        {% for s in site.social %}
-                        <a href="{{s[2]}}{{s[0]}}" title="{{site.title}} on {{s[1]}}" rel="nofollow" class="inherit">{{s[1]}}</a><br>
-                        {% endfor %}
+                    <nav class="nav nav-stack">
+
+                        <a href="/" title="Home" class="inherit">
+                            Home
+                        </a><br>
+
+                        <a href="/#capabilities" title="Capabilities" class="inherit">
+                            Capabilities
+                        </a><br>
+
+                        <a href="about" title="About" class="inherit">
+                            About
+                        </a><br>
+
+                        <label for="formHire" class="cursor-pointer">
+                            Contact
+                        </label><br>
+
+                        <a href="/sitemap" class="c-black inherit">Sitemap</a>
+
                     </nav>
 
                 </div>
 
                 <div class="col2 pad-top col6@medium t-center@medium add-bottom@3x@medium">
 
-                    <a href="/#capabilities" title="Capabilities" class="inherit">
-                        Capabilities
-                    </a><br>
-
-                    <label for="formHire" class="cursor-pointer">
-                        Contact
-                    </label><br>
-
-                    <a href="/sitemap" class="c-black inherit">Sitemap</a>
+                    <nav class="nav nav-stack">
+                        {% for s in site.social %}
+                        <a href="{{s[2]}}{{s[0]}}" title="{{site.title}} on {{s[1]}}" rel="nofollow" class="inherit">{{s[1]}}</a><br>
+                        {% endfor %}
+                    </nav>
 
                 </div>
 

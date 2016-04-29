@@ -8,9 +8,10 @@ var gulp = require('gulp'),
     twig = require('gulp-twig'),
     resumePdfToJson = require('resume-pdf-to-json'),
     htmlreplace = require('gulp-html-replace'),
-    fs = require('fs')
+    fs = require('fs'),
     path = require('path'),
-    extend = require('util')._extend;
+    extend = require('util')._extend,
+    rename = require('gulp-rename');
 
 
 /**
@@ -46,19 +47,25 @@ function templates() {
     service.matter = matterservice;
     service.pdftojson = pdftojsonservice;
     service.site = site;
+    service.route = route;
 
     var src = [
         'site/*.twig',
-        '!site/resume.twig' // temp
+        '!site/sitemap.xml.twig',
+        '!site/resume.twig'
     ];
+
+    var resume = 'site/resume.twig';
+    var sitemap = 'site/sitemap.xml.twig';
 
 
     function site(data, file) {
         try {
-            var f = file || 'site';
-            var d = fs.readFileSync(DATA + f + '.json', 'utf8');
-            if (f === 'site') {
-                data[f] = JSON.parse(d);
+            var name = (file) ? path.basename(file.path).split('.')[0] : 'site';
+            // name = name || 'site';
+            var d = fs.readFileSync(DATA + name + '.json', 'utf8');
+            if (name === 'site') {
+                data[name] = JSON.parse(d);
             } else {
                 data = extend(data, JSON.parse(d));
             }
@@ -66,15 +73,30 @@ function templates() {
         return data;
     }
 
+    function route(data, file) {
+        var r = file.path.split('site/')[1];
+        r = r.split('.')[0];
+        data.route = (r === 'index') ? '' : '/' + r;
+        return data;
+    }
+
     function matterservice(file) {
-        var m = matter(String(file.contents));
-        var name = path.basename(file.path).split('.')[0];
+        var f = file;
+        var m = matter(String(f.contents));
+        // var name = path.basename(file.path).split('.')[0];
         var data = service.site(m.data);
+
+        data = service.site(data, f);
+        // data = service.url(data, file);
+
         // file.contents = new Buffer(m.content);
         // get site data
         // m.data = service.site(m.data);
         // get page data if it exits
-        data = service.site(data, name);
+        data = service.route(data, f);
+        // console.log(name);
+        // data = service.site(data, file);
+
         return data;
     }
 
@@ -104,13 +126,18 @@ function templates() {
         .pipe(gulp.dest(BUILD));
 
     // Resume
-    gulp.src('site/resume.twig')
+    gulp.src(resume)
         // Unique Resume Data Pipe
         .pipe(data(service.pdftojson))
         .pipe(twig())
         .pipe(htmlreplace(CONFIG))
         .pipe(gulp.dest(BUILD));
 
+    gulp.src(sitemap)
+        .pipe(data(service.matter))
+        .pipe(twig())
+        .pipe(rename('sitemap.xml'))
+        .pipe(gulp.dest(BUILD));
 
 }
 

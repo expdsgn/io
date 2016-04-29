@@ -1,6 +1,6 @@
 {
-    "title": "Home",
-    "text": "<p>I am a design technologist pushing positive mission driven projects forward with visual design and web technology specializing in identity design, interface design, front-end web development, and data visualization.</p><p>Experiences are moments facilitated by design. Often these moments are solutions to problems – created to help us live more fulfilling lives.</p>",
+    "text": "Product Design For Social Impact.",
+    "quote": "Experiences are moments facilitated by design. Often these moments are solutions to problems – created to help us live more fulfilling lives.",
     "capabilities": [
         {
             "name": "Identity Design",
@@ -9,12 +9,12 @@
         },
         {
             "name": "Interface Design",
-            "text": "<p>Interfaces are unique and usable experiences that meet your audience’s needs embedded with your mission and vision.</p>",
+            "text": "<p>Interfaces are clear, flexible, efficient, and familiar experiences that help your audience meet their objectives.</p>",
             "link": "http://bit.ly/1Sc5vJL"
         },
         {
             "name": "Front-end<br>Development",
-            "text": "<p>Front-end development is the crafting of your experience using the latest standards in web technology and accessibility.</p>",
+            "text": "<p>Front-end development is the crafting of your experience adhering to the standards in web technology and accessibility.</p>",
             "link": "http://bit.ly/1oRQNtD"
         },
         {

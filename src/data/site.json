@@ -2,24 +2,27 @@
     "title": "exp. design",
     "entity": "exp. design llc",
     "url": "http://expdesign.io",
-    "description": "exp. design pushes positive mission driven projects forward with visual design and web technology.",
+    "mission": "Moving social impact projects forward with design and technology.",
+    "vision": "",
     "keywords": "",
     "author": "Devon Hirth",
     "color": "#dd3335",
     "favicons": "favicons/",
+    "protocol": "https://",
     "hosts": ["expdesign.io"],
+    "domain": "expdesign.io",
     "google": {
         "tracking_id": "UA-70488413-1"
     },
     "opengraph": {
         "title": "exp. design",
         "type": "website",
-        "url": "http://expdesign.io",
+        "url": "https://expdesign.io",
         "image": "",
         "imagetype": "",
         "imageheight": "",
         "imagewidth": "",
-        "description": "exp. design pushes positive mission driven projects forward with visual design and web technology.",
+        "description": "Moving social impact projects forward with design and technology.",
         "sitename": "exp. design"
     },
     "twitter": {
@@ -27,7 +30,7 @@
         "site": "@expdsgn",
         "creator": "@expdsgn",
         "title": "exp. design",
-        "description": "exp. design pushes positive mission driven projects forward with visual design and web technology.",
+        "description": "Moving social impact projects forward with design and technology.",
         "image": ""
     },
     "contacts": {
@@ -35,10 +38,12 @@
         "phone": ["347.927.2397", "Phone Number"]
     },
     "social": {
-        "behance": ["expdesignio", "Behance", "https://www.behance.net/"],
-        "github": ["expdesignio", "Github", "https://github.com/"],
-        "linkedin": ["exp-", "LinkedIn", "https://www.linkedin.com/company/"],
+        "behance": ["devonhirth", "Behance", "https://www.behance.net/"],
+        "github": ["devowhippit", "Github", "https://github.com/"],
+        "linkedin": ["devonhirth", "LinkedIn", "https://www.linkedin.com/in/"],
         "facebook": ["exp.page", "Facebook", "https://www.facebook.com/"],
         "twitter": ["expdsgn", "Twitter", "https://twitter.com/"]
-    }
+    },
+    "portfolio": ["/downloads/exp.portfolio-0.1.pdf", "View Portfolio"],
+    "resume": ["/downloads/exp.resume-0.1.pdf", "View Resume"]
 }

@@ -12,10 +12,12 @@
 
 .wrap, [class*='wrap-']
     display block
+    width 100%
     margin-left auto
     margin-right auto
     padding-left margins
     padding-right margins
+    box-sizing border-box
 
 for _n, r in range
     .wrap-{_n}
@@ -31,7 +33,7 @@ for c in (1..cols)
 
 for c in (1..cols)
     _w = 100 / c
-    .row{'\@'}c{c} > .col
+    .row-c{c} > .col
         width _w * 1%
 
 .row > [class*='col'].inherit

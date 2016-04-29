@@ -109,7 +109,7 @@ c-selector(_name, _rgb)
         box-shadow inset 0 -8px 0 gethsllinks(_rgb, links)
         background-color gethsllinks(_rgb, links)
 
-    .btn.c-{_name}{':not(.\@inherit)'}:hover
+    .btn.c-{_name}:not(.inherit):hover
         color white
         background-color _rgb
 

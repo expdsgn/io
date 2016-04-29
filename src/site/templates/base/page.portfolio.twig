@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    {% include '../components/head.twig' %}
+
+    <body>
+
+        {% include '../components/header.twig' %}
+
+        <section class="bg-white c-blue@s1">
+
+            <div class="wrap-max">
+
+                {% block content %}{% endblock %}
+
+            </div>
+
+        </section>
+
+        <section class="pad bg-white">
+
+            <div class="vh-100 d-flex fa-center bg-red">
+
+                <div class="wrap-mid1 t-center">
+
+                    <blockquote class="bg-red">View More Work on <a href="#">Behance</a></blockquote>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        {% include '../components/contact.twig' %}
+
+        {% include '../components/footer.twig' %}
+
+    </body>
+
+</html>

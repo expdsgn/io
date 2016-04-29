@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+    {% include '../components/head.twig' %}
+
+    <body>
+
+        {% include '../components/header.twig' %}
+
+        <div class="bg-white c-blue@s1">
+
+            <div class="wrap-mid1 wrap-min@min">
+
+                <div class="vh-100 d-flex fa-center">
+
+                    <div class="row row-top w-100 shim@84x">
+
+                        <div class="t-center b-bottom b-gray@t2 pad-bottom-3x">
+
+                            <a href="{{site.resume[0]}}" title="Download Resume" class="btn btn-large c-red b-red">Download Resume</a>
+
+                        </div>
+
+                        <div class="col3 col12@medium">
+
+                            <h2 class="shim@36x add-none">{{site.author}}</h2><br>
+
+                            {{site.domain}}<br>
+
+                            <label for="formHire" class="cursor-pointer c-red">
+                                {{site.contacts.general[0]}}
+                            </label><br>
+
+                            <a href="tel:{{site.contacts.phone[0]}}"
+                               title="{{site.contacts.phone[1]}}"
+                               class="inherit c-red"
+                               itemprop="email">
+                                {{site.contacts.phone[0]}}
+                            </a><br>
+
+                        {% spaceless %}</div>
+
+                        <div class="col9 col12@medium">{% endspaceless %}
+
+                            {% block content %}{% endblock %}
+
+                            <div class="shim@84x"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% include '../components/contact.twig' %}
+
+        {% include '../components/footer.twig' %}
+
+    </body>
+
+</html>

@@ -27,6 +27,7 @@ var BUILD = '../surge';
 function fonts() {
 
     var src = [
+        'Siro-ExtraLight',
         'Siro-Light',
         'Siro-SemiBold'
     ];

@@ -1,0 +1,142 @@
+{
+    "portfolio": [
+        {
+            "title": "quadrant, global economic data",
+            "images": [
+                {
+                    "src": "behance_quadrant_io_brand.png",
+                    "title": "",
+                    "alt": "",
+                    "description": "<p>Quadrant.io is a toolkit that provides macroeconomic data. As co-founder and Lead Design Technologist, I am responsible for the product design and the front-end development of Quadrant.io’s web application and marketing sites. I contributed to building the core of the company using my skills in creative strategy, creative direction, identity/branding, user experience design, user interface design, data visualization, front-end web development and user interface engineering.</p><p><a class=\"c-red\" href=\"http://bit.ly/2496lJH\" rel=\"nofollow\">See Quadrant.io</a>.</p>"
+                },
+                {
+                    "src": "behance.quadrant_1.0.png",
+                    "title": "",
+                    "alt": ""
+                },
+                {
+                    "src": "behance.quadrant_0.6-product-features.png",
+                    "title": "",
+                    "alt": ""
+                },
+                {
+                    "src": "behance.quadrant_0.7-products.png",
+                    "title": "",
+                    "alt": ""
+                },
+                {
+                    "src": "behance.quadrant.io-app_0.3-landing.png",
+                    "title": "",
+                    "alt": "",
+                    "browser": true,
+                    "description": "<p>To address our need to continuously iterate on the product, a minimal design aesthetic was chosen. This allowed us to honor the brand throughout the application experience as well as more quickly and flexibly integrate new features with faster design and engineering sprints.</p><p><a class=\"c-red\" href=\"http://bit.ly/215FoER\" rel=\"nofollow\">See the web application</a>.</p>"
+                },
+                {
+                    "src": "behance.quadrant.io-app_0.7-yield-curves.png",
+                    "title": "",
+                    "alt": "",
+                    "browser": true
+                },
+                {
+                    "src": "behance.quadrant.io-app_2.0-chart-editor.png",
+                    "title": "",
+                    "alt": "",
+                    "browser": true
+                },
+                {
+                    "src": "behance.quadrant-excel_0.4.png",
+                    "title": "",
+                    "alt": ""
+                }
+            ]
+        },
+        {
+            "title": "eleven point o, quantitative impact investing",
+            "images": [
+                {
+                    "src": "elevenpointo-0.1.png",
+                    "title": "",
+                    "alt": "Eleven Point O Product Design Landing Screenshot",
+                    "description": "Eleven Point O is a quantitative impact investment platform. I am responsible for the branding and marketing site design using my skills in creative strategy, creative direction, identity/branding, user experience design."
+                },
+                {
+                    "src": "elevenpointo-0.1-01.png",
+                    "title": "",
+                    "alt": "Eleven Point O Identity Design Screenshot",
+                    "description": "The identity blends two symbols together, sustainability and quantitative visualization. Using fresh colors and modern shapes conveys a sense of hope, professionalism, and simplicity."
+                },
+                {
+                    "src": "elevenpointo-com.primary.png",
+                    "title": "",
+                    "alt": "Eleven Point O Marketing Splash Page Screenshot",
+                    "browser": true,
+                    "description": "The marketing splash page is the main introduction of Eleven Point O to potential partners and investors. The key elements of the page are the mission and vision, an introduction of the founders, contact information, and click-through actions for staying up-to-date on the company."
+                }
+            ]
+        },
+        {
+            "title": "bloomberg businessweek \"fix this\" series",
+            "images": [
+                {
+                    "src": "bloomberg.fix-this-city-planning.landing.png",
+                    "title": "",
+                    "alt": "Bloomberg Businessweek \"Fix This\" City Planning Data Visualization Screenshot",
+                    "browser": true,
+                    "description": "This interactive graphic for Bloomberg Businessweek explores the shift of economic growth in the world's cities from industrialized to developing countries. I designed and developed this graphic using my skills in data visualization and front-end web development. Paginated annotations describe the story of the visualization but also allow the user to explore the data freely."
+                },
+                {
+                    "src": "bloombert.fix-this-healthcare.primary.png",
+                    "title": "",
+                    "alt": "Bloomberg Businessweek \"Fix This\" Healthcare Data Visualization Screenshot",
+                    "browser": true,
+                    "description": "This interactive graphic for Bloomberg Businessweek compares healthcare of the world's countries. I designed and developed this graphic using my skills in data visualization and front-end web development. Paginated annotations describe the story of the visualization but also allow the user to explore the data freely."
+                }
+            ]
+        },
+        {
+            "title": "akorn: network diversity for alaska",
+            "images": [
+                {
+                    "src": "akorn.alaskacommunications.com.01.png",
+                    "title": "",
+                    "alt": "AKORN by Alaska Communications Interactive Data Graphic Screenshot",
+                    "browser": true,
+                    "description": "<p>AKORN is a fiber-optic cable system built for Alaska Communications. I designed and developed this interactive visualization based on an existing information graphic poster using my skills in user interface design and front-end web development.</p><p><a class=\"c-red\" rel=\"nofollow\" href=\"http://bit.ly/1SBC0Bq\">See interactive information graphic</a>.</p><p><a class=\"c-red\" rel=\"nofollow\" href=\"http://bit.ly/1VqXuBr\">See original poster design</a>.</p>"
+                },
+                {
+                    "src": "akorn.alaskacommunications.com.02.png",
+                    "title": "",
+                    "alt": "AKORN by Alaska Communications Interactive Data Graphic Screenshot",
+                    "browser": true,
+                    "description": ""
+                },
+                {
+                    "src": "akorn.alaskacommunications.com.04.png",
+                    "title": "",
+                    "alt": "AKORN by Alaska Communications Interactive Data Graphic Screenshot",
+                    "browser": true,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "title": "angazadesign.com",
+            "images": [
+                {
+                    "src": "angazadesign-com.primary.jpg",
+                    "title": "",
+                    "alt": "Angazadesign.com Home Page Screenshot",
+                    "browser": true,
+                    "description": "<p>Angaza's pay-as-you-go technology platform enables manufacturers and distributors to make energy products affordable to the world's 1 billion off-grid consumers. I designed and developed this marketing site using my skills in web design and front-end web development.</p>"
+                },
+                {
+                    "src": "angazadesign-com.secondary.jpg",
+                    "title": "",
+                    "alt": "Angazadesign.com Product Page Screenshot",
+                    "browser": true,
+                    "description": ""
+                }
+            ]
+        }
+    ]
+}

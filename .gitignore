@@ -21,6 +21,7 @@ CVS
 *.csr
 *.key
 *.pem
+*.crt
 
 # builds and temp files
 surge/*

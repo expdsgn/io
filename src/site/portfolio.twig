@@ -1,0 +1,52 @@
+
+
+{% extends "templates/base/page.portfolio.twig" %}
+
+
+{% block content %}
+
+    {% for index, p in portfolio %}
+
+    <div class="pad-vertical-2x add-bottom b-bottom b-gray@t2" id="0{{index + 1}}">
+        <div class="h1 add-none">0{{index + 1}}</div>
+        <div class="h3 font-light c-red">{{p.title}}</div>
+    </div>
+
+    {% for i in p.images %}
+    <div class="pad-bottom">
+
+        <div class="d-flex d-block@medium">
+
+            <div>
+
+                {% if i.browser %}<div class="height@24x b-top b-left b-right b-gray@t2 c-gray@t2 b-4x soft-top pad-horizontal">
+                    <span>● ● ●</span>
+                </div>{% endif %}
+
+                {% if i.browser %}<div class="pad b b-gray@t2 b-4x soft-bottom">
+                {% else %}<div>{% endif %}
+
+                    <img src="portfolio/{{i.src}}" alt="" title="" class="d-block">
+
+                </div>
+
+            </div>
+
+            {% if i.description %}
+            <div class="f-276x fs-small pad-horizontal-2x pad-vertical-3x@medium add-bottom-2x@medium">
+            {% else %}
+            <div class="f-276x fs-small pad-horizontal-2x">
+            {% endif %}
+
+                {{i.description}}
+
+            </div>
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+    {% endfor %}
+
+{% endblock %}

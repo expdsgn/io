@@ -10,13 +10,6 @@
  * Tasks
  */
 
-// color backgrounds
-for _name, _rgb in rgbs
-    bg-selector _name, _rgb
-    transparencies _name, _rgb
-    tintsandshades _name, _rgb, tints
-    tintsandshades _name, _rgb, shades
-
 // neutral backgrounds
 for _name, _neutral in neutrals
     bg-selector _name, _neutral
@@ -24,17 +17,24 @@ for _name, _neutral in neutrals
     tintsandshades _name, _neutral, neutraltints
     tintsandshades _name, _neutral, neutralshades
 
-// color colors
+// color backgrounds
 for _name, _rgb in rgbs
-    c-selector _name, _rgb
-    tintsandshades _name, _rgb, tints, false
-    tintsandshades _name, _rgb, shades, false
+    bg-selector _name, _rgb
+    transparencies _name, _rgb
+    tintsandshades _name, _rgb, tints
+    tintsandshades _name, _rgb, shades
 
 // neutral colors
 for _name, _neutral in neutrals
     c-selector _name, _neutral
     tintsandshades _name, _neutral, neutraltints, false
     tintsandshades _name, _neutral, neutralshades, false
+
+// color colors
+for _name, _rgb in rgbs
+    c-selector _name, _rgb
+    tintsandshades _name, _rgb, tints, false
+    tintsandshades _name, _rgb, shades, false
 
 
 /**

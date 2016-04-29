@@ -1,33 +1,28 @@
 ---
 title: Resume
+skip: ['Devon Hirth', 'Summary', 'Skills & Expertise']
 ---
 
-{% extends "templates/base/page.twig" %}
+{% extends "templates/base/page.resume.twig" %}
 
 
 {% block content %}
 
-    {% for r in resume %}
+    {% for index, r in resume %}
+        {% if r.head[0] not in skip %}
 
-        <h2>{{r.head[0]}}</h2>
-        <p>{{r.head[1]}} {{r.head[2]}}</p>
+        <h2 class="shim@36x add-none">{{r.head[0]}}</h2>
+        {% if r.head[1]|length > 1 %}<p>{{r.head[1]}} {{r.head[2]}}</p>{% endif %}
 
-        {% if r.text is iterable %}
-        <ul>
-            {% for t in r.text %}
-            <li>{{t}}</li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <p>{{r.text}}</p>
-        {% endif %}
+        {% if r.text|length > 0 %}<p>{{r.text}}</p>{% endif %}
 
         {% for s in r.sections %}
-        <h3>{{s.head[0]}}</h3>
-        <p>{{s.head[1]}} {{s.head[2]}}</p>
+        <h3 class="shim@24x add-none">{{s.head[0]}}</h3>
+        <p class="add-none">{{s.head[1]}} {{s.head[2]}}</p>
         <p>{{s.text}}</p>
         {% endfor %}
 
+        {% endif %}
     {% endfor %}
 
 {% endblock %}
