@@ -1,6 +1,6 @@
 ### What is this repository for? ###
 
-A static site generator. Gulp, Twig, Stylus, JSON, Front Matter. Testing and Deployment Agnostic.
+A static site generator. Gulp, Twig, Stylus, JSON, Front Matter. Testing and deployment agnostic.
 
 ### How do I get set up? ###
 
@@ -11,8 +11,8 @@ A static site generator. Gulp, Twig, Stylus, JSON, Front Matter. Testing and Dep
 
 ### Testing and Deployment Workflow ###
 
-Testing and deployment is agnostic but this has been used with Browsersync.io (Visual Testing)
-and Surge.sh (Deployment/Hosting). The generator will build files to a /deploy directory which
+Testing and deployment is agnostic but this has been used with Browsersync.io (visual testing)
+and Surge.sh (deployment/hosting). The generator will build files to a /deploy directory which
 can be used to serve the site locally and as a repository for file deployment.
 
 ### Content ###
