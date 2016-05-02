@@ -12,17 +12,17 @@
 
             <div class="w-100 animated fadeInUp">
 
-                <div class="row row-top t-center">
+                <div class="row row-top t-center t-left@medium">
 
-                    <div class="col4 col12@medium">
+                    <div class="col4 col8@medium">
 
-                        <div class="add-top pad-right-3x">
+                        <div class="add-top pad-right-3x pad-none@medium">
 
                             <span class="hidden">{{site.title}}</span>
 
                             {% include 'icons/svg/expdesign.logo.twig' with {'color':'red'} %}
 
-                            <label class="btn btn-large c-red b-red d-block" for="formHire">
+                            <label class="btn btn-large btn-block c-red b-red d-none@medium" for="formHire">
 
                                 <span>Available for Hire</span>
 
@@ -34,23 +34,37 @@
 
                     <div class="col7 t-left col12@medium">{% endspaceless %}
 
-                        <h1>{{text}}</h1>
+                        <h1 class="h2@medium">{{text}}</h1>
+
+                        <label class="btn btn-large c-red b-red d-none d-inline-block@medium add-bottom-2x" for="formHire">
+
+                            <span>Available for Hire</span>
+
+                        </label>
 
                     </div>
 
-                    <div class="col11 pad-vertical-3x b-top b-bottom b-gray@t2">
+                    <div class="col11 col12@medium pad-vertical-3x pad-top@medium pad-bottom-2x@medium b-top b-bottom b-gray@t2">
 
-                        <nav class="nav c-red">
+                        <nav class="nav c-red row">{% spaceless %}
 
-                            <a href="/#capabilities" title="Capabilities">Capabilities</a>
+                            <span class="col3 col6@medium">
+                                <a href="/#capabilities" title="Capabilities">Capabilities</a>
+                            </span>
 
-                            <a href="/about" title="About">About</a>
+                            <span class="col3 col6@medium">
+                                <a href="/about" title="About">About</a>
+                            </span>
 
-                            <a href="/portfolio" title="{{site.portfolio[1]}}">Portfolio</a>
+                            <span class="col3 col6@medium">
+                                <a href="/portfolio" title="View Portfolio">Portfolio</a>
+                            </span>
 
-                            <a href="/resume" title="{{site.resume[1]}}">Resume</a>
+                            <span class="col3 col6@medium">
+                                <a href="/resume" title="View Resume">Resume</a>
+                            </span>
 
-                        </nav>
+                        {% endspaceless %}</nav>
 
                     </div>
 
@@ -73,7 +87,7 @@
 
         <div class="wrap-mid1">
 
-            <blockquote class="bq-left">{{quote}}</blockquote>
+            <blockquote class="bq-left bq-left-none@medium fs-large@medium add-none@medium">{{quote}}</blockquote>
 
         </div>
 

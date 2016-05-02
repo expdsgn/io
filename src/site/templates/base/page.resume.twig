@@ -1,52 +1,51 @@
-<!DOCTYPE html>
-<html>
 
-    {% include '../components/head.twig' %}
 
-    <body>
+{% extends "html.twig" %}
 
-        {% include '../components/header.twig' %}
 
-        <div class="bg-white c-blue@s1">
+{% block body %}
+<body>
 
-            <div class="wrap-mid1 wrap-min@min">
+    {% include '../components/header.twig' %}
 
-                <div class="vh-100 d-flex fa-center">
+    <div class="bg-white c-blue@s1">
 
-                    <div class="row row-top w-100 shim@84x">
+        <div class="wrap-mid1 wrap-min@min">
 
-                        <div class="t-center b-bottom b-gray@t2 pad-bottom-3x">
+            <div class="vh-100 d-flex fa-center">
 
-                            <a href="{{site.resume[0]}}" title="Download Resume" class="btn btn-large c-red b-red">Download Resume</a>
+                <div class="row row-top w-100">
 
-                        </div>
+                    <div class="t-center b-bottom b-gray@t2 pad-vertical-3x">
 
-                        <div class="col3 col12@medium">
+                        <a href="{{site.resume[0]}}" title="{{site.resume[1]}}" class="btn btn-large c-red b-red">{{site.resume[1]}}</a>
 
-                            <h2 class="shim@36x add-none">{{site.author}}</h2><br>
+                    </div>
 
-                            {{site.domain}}<br>
+                    <div class="col3 col12@medium">
 
-                            <label for="formHire" class="cursor-pointer c-red">
-                                {{site.contacts.general[0]}}
-                            </label><br>
+                        <h2 class="shim@36x add-none">{{site.author}}</h2><br>
 
-                            <a href="tel:{{site.contacts.phone[0]}}"
-                               title="{{site.contacts.phone[1]}}"
-                               class="inherit c-red"
-                               itemprop="email">
-                                {{site.contacts.phone[0]}}
-                            </a><br>
+                        {{site.domain}}<br>
 
-                        {% spaceless %}</div>
+                        <label for="formHire" class="cursor-pointer c-red">
+                            {{site.contacts.general[0]}}
+                        </label><br>
 
-                        <div class="col9 col12@medium">{% endspaceless %}
+                        <a href="tel:{{site.contacts.phone[0]}}"
+                           title="{{site.contacts.phone[1]}}"
+                           class="inherit c-red"
+                           itemprop="email">
+                            {{site.contacts.phone[0]}}
+                        </a><br>
 
-                            {% block content %}{% endblock %}
+                    {% spaceless %}</div>
 
-                            <div class="shim@84x"></div>
+                    <div class="col9 col12@medium">{% endspaceless %}
 
-                        </div>
+                        {% block content %}{% endblock %}
+
+                        <div class="shim@84x"></div>
 
                     </div>
 
@@ -56,10 +55,11 @@
 
         </div>
 
-        {% include '../components/contact.twig' %}
+    </div>
 
-        {% include '../components/footer.twig' %}
+    {% include '../components/contact.twig' %}
 
-    </body>
+    {% include '../components/footer.twig' %}
 
-</html>
+</body>
+{% endblock %}

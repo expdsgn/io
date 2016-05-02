@@ -27,18 +27,14 @@ h1, .h1, h2, .h2, h3, .h3
 
 h1, .h1
     {font-thin}
-    font-size 66px
-    line-height 70px
+    {h1}
 
 h2, .h2
-    font-size 36px
-    line-height 42px
+    {h2}
 
 h3, .h3
     {font-semibold}
-    font-size 20px
-    line-height 24px
-    margin-bottom 6px
+    {h3}
 
 .font-thin
     {font-thin}
@@ -80,16 +76,37 @@ blockquote
     padding-right 20px
 
 .fs-large
-    font-size 18px
-    line-height 28px
+    {large}
 
 .fs-small
-    font-size 13px
-    line-height 22px
+    {small}
 
-// for _b, b in breaks
-//     @media only screen and (max-width : b)
-//         body
-//             font-size 18px
-//             line-height 28px
+for _b, b in breaks
+    @media only screen and (max-width : b)
+        .h1{'\@'}{_b}
+            {font-thin}
+            {h1}
+
+        .h2{'\@'}{_b}
+            {h2}
+
+        .h3{'\@'}{_b}
+            {font-semibold}
+            {h3}
+
+        .bq-left-none{'\@'}{_b}
+            border-left none
+            padding-left inherit
+
+        .bq-right-none{'\@'}{_b}
+            border-right none
+            padding-right inherit
+
+        .fs-large{'\@'}{_b}
+            {large}
+
+        .fs-small{'\@'}{_b}
+            {small}
+
+
 

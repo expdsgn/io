@@ -1,40 +1,50 @@
-<!DOCTYPE html>
-<html>
 
-    {% include '../components/head.twig' %}
 
-    <body>
+{% extends "html.twig" %}
 
-        {% include '../components/header.twig' %}
 
-        <section class="bg-white c-blue@s1">
+{% block body %}
+<body>
 
-            <div class="wrap-max">
+    {% include '../components/header.twig' %}
 
-                {% block content %}{% endblock %}
+    <section class="bg-white c-blue@s1">
 
-            </div>
+        <div class="wrap-max">
 
-        </section>
+            <div class="t-center b-bottom b-gray@t2 pad-vertical-3x">
 
-        <section class="pad bg-white">
-
-            <div class="vh-100 d-flex fa-center bg-red">
-
-                <div class="wrap-mid1 t-center">
-
-                    <blockquote class="bg-red">View More Work on <a href="#">Behance</a></blockquote>
-
-                </div>
+                <a href="{{site.portfolio[0]}}" title="{{site.portfolio[1]}}" class="btn btn-large c-red b-red">{{site.portfolio[1]}}</a>
 
             </div>
 
-        </section>
+            {% block content %}{% endblock %}
 
-        {% include '../components/contact.twig' %}
+        </div>
 
-        {% include '../components/footer.twig' %}
+    </section>
 
-    </body>
+    <section class="pad bg-white">
 
-</html>
+        <div class="vh-100 d-flex fa-center bg-red">
+
+            <div class="wrap-mid1 t-center">
+
+                <blockquote class="bg-red">
+                    View More Work on <a href="http://bit.ly/1SIK1zc" title="View More Work on Behance" rel="nofollow">Behance</a>
+                </blockquote>
+
+                <a href="{{site.portfolio[0]}}" title="{{site.portfolio[1]}}" class="btn btn-large">{{site.portfolio[1]}}</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include '../components/contact.twig' %}
+
+    {% include '../components/footer.twig' %}
+
+</body>
+{% endblock %}

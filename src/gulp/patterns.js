@@ -58,7 +58,7 @@ function patterns() {
         'node_modules/animate.css/source/fading_entrances/fadeInDown.css',
         'node_modules/animate.css/source/fading_entrances/fadeInLeft.css',
         'node_modules/animate.css/source/fading_entrances/fadeInRight.css',
-        'node_modules/animate.css/source/fading_entrances/fadeInUp.css'
+        'node_modules/animate.css/source/fading_entrances/fadeInUp.css',
     ];
 
     var imports = [

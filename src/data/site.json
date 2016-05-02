@@ -44,6 +44,6 @@
         "facebook": ["exp.page", "Facebook", "https://www.facebook.com/"],
         "twitter": ["expdsgn", "Twitter", "https://twitter.com/"]
     },
-    "portfolio": ["/downloads/exp.portfolio-0.1.pdf", "View Portfolio"],
-    "resume": ["/downloads/exp.resume-0.1.pdf", "View Resume"]
+    "portfolio": ["/downloads/exp.portfolio-0.1.pdf", "Download Portfolio"],
+    "resume": ["/downloads/exp.resume-0.1.pdf", "Download Resume"]
 }

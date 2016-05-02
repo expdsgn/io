@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en" xmlns:fb="http://ogp.me/ns/fb#"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 ie7" lang="en" xmlns:fb="http://ogp.me/ns/fb#"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9 ie8" lang="en" xmlns:fb="http://ogp.me/ns/fb#"><![endif]-->
-<!--[if IE 9]><html class="no-js lt-ie10 ie9" lang="en" xmlns:fb="http://ogp.me/ns/fb#"><![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js ie10" lang="en"> <!--<![endif]-->
 
-    {% include '../components/head.twig' %}
 
-    <body>
+{% extends "html.twig" %}
 
-        <!--{% include '../components/palette.twig' %}-->
 
-        {% block content %}{% endblock %}
+{% block body %}
+<body>
 
-        {% include '../components/contact.twig' %}
+    <!--{% include '../components/palette.twig' %}-->
 
-        {% include '../components/footer.twig' %}
+    {% block content %}{% endblock %}
 
-    </body>
+    {% include '../components/contact.twig' %}
 
-</html>
+    {% include '../components/footer.twig' %}
+
+</body>
+{% endblock %}
