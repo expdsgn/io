@@ -1,0 +1,44 @@
+<footer>
+
+    <div itemscope itemtype="http://schema.org/Brand">
+
+        <p class="source-org vcard copyright"
+           itemprop="legalName">©{{ 'now'|date('Y') }} {{site.entity}}</p>
+
+        <nav>
+
+            <span itemprop="email">
+                {{site.contacts.general[0]}}
+            </span><br>
+
+            <a href="tel:{{site.contacts.phone[0]}}"
+               title="{{site.contacts.phone[1]}}"
+               itemprop="phone">
+                {{site.contacts.phone[0]}}
+            </a>
+
+        </nav>
+
+        <p>{{site.location}}</p>
+
+    </div>
+
+    <nav>
+
+        {% for s in sitemap %}
+        <a href="{{s.url}}" title="{{s.title}}">{{s.title}}</a><br>
+        {% endfor %}
+
+        <a href="/sitemap">Sitemap</a>
+
+    </nav>
+
+    <nav>
+        {% for s in site.social %}
+        <a href="{{s[2]}}{{s[0]}}" title="{{site.title}} on {{s[1]}}" rel="nofollow">{{s[1]}}</a><br>
+        {% endfor %}
+    </nav>
+
+    {% include '../components/form.signup.twig' %}
+
+</footer>

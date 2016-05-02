@@ -1,0 +1,20 @@
+{
+    "title": "Sitemap",
+    "sitemap": [
+        {
+            "title": "Home",
+            "url": "",
+            "description": ""
+        },
+        {
+            "title": "About",
+            "url": "about",
+            "description": ""
+        },
+        {
+            "title": "Contact",
+            "url": "contact",
+            "description": ""
+        }
+    ]
+}

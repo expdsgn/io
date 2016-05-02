@@ -1,0 +1,44 @@
+{
+    "title": "",
+    "entity": "",
+    "mission": "",
+    "vision": "",
+    "keywords": "",
+    "author": "",
+    "color": "",
+    "favicons": "favicons/",
+    "protocol": "http://",
+    "hosts": [""],
+    "domain": "",
+    "google": {
+        "tracking_id": "",
+        "site_verification": ""
+    },
+    "opengraph": {
+        "title": "",
+        "type": "website",
+        "url": "",
+        "image": "",
+        "imagetype": "",
+        "imageheight": "",
+        "imagewidth": "",
+        "description": "",
+        "sitename": ""
+    },
+    "twitter": {
+        "card": "summary_large_image",
+        "site": "@",
+        "creator": "@",
+        "title": "",
+        "description": "",
+        "image": ""
+    },
+    "contacts": {
+        "general": ["", "Information"],
+        "phone": ["", "Phone Number"]
+    },
+    "social": {
+        "facebook": ["handle", "Facebook", "https://www.facebook.com/"],
+        "twitter": ["handle", "Twitter", "https://twitter.com/"]
+    }
+}

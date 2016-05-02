@@ -1,0 +1,93 @@
+/**
+ * Dependencies
+ */
+
+@require 'grid.vars.styl';
+@require 'fonts.vars.styl';
+@require 'fonts.mixins.styl';
+
+
+/**
+ * Tasks
+ */
+
+// font-face('Font Name', 'font-file', normal, weight-thin)
+
+body
+    color color-base
+    {font-light}
+    {font-smooth}
+
+h1, .h1, h2, .h2, h3, .h3
+    {font-light}
+    margin-bottom 20px
+
+h1, .h1
+    {font-thin}
+    {h1}
+
+h2, .h2
+    {h2}
+
+h3, .h3
+    {font-semibold}
+    {h3}
+
+.font-thin
+    {font-thin}
+
+.font-light
+    {font-light}
+
+.font-semibold
+    {font-semibold}
+
+for i in (1..6)
+    * > h{i}:first-child
+        margin-top 0px
+
+input, button,
+select, textarea
+    {font-light}
+
+select, textarea, input
+    {font-aliased}
+
+body
+    font-size 16px
+    line-height 24px
+
+small
+    font-size 80%
+
+blockquote
+    font-size 36px
+    line-height 46px
+
+.fs-large
+    {large}
+
+.fs-small
+    {small}
+
+for _b, b in breaks
+    @media only screen and (max-width : b)
+        .h1{'\@'}{_b}
+            {font-thin}
+            {h1}
+
+        .h2{'\@'}{_b}
+            {h2}
+
+        .h3{'\@'}{_b}
+            {font-semibold}
+            {h3}
+
+        .fs-large{'\@'}{_b}
+            {large}
+
+        .fs-small{'\@'}{_b}
+            {small}
+
+
+

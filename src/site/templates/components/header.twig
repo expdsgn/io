@@ -1,0 +1,9 @@
+<header>
+
+    <nav>
+        {% for s in sitemap %}
+        <a href="{{s.url}}" title="{{s.title}}">{{s.title}}</a><br>
+        {% endfor %}
+    </nav>
+
+</header>
