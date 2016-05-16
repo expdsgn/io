@@ -13,18 +13,18 @@
                     <p class="source-org vcard copyright" itemprop="legalName">©{{ 'now'|date('Y') }} {{site.entity}}</p>
 
                     <nav>
-                        <label for="formHire" class="cursor-pointer">
+                        <label for="formHire" class="cursor-pointer" itemprop="email">
                             {{site.contacts.general[0]}}
                         </label><br>
                         <a href="tel:{{site.contacts.phone[0]}}"
                            title="{{site.contacts.phone[1]}}"
                            class="inherit"
-                           itemprop="email">
+                           itemprop="phone">
                             {{site.contacts.phone[0]}}
                         </a><br>
                     </nav>
 
-                    <p>Based in Brooklyn, NY</p>
+                    <p>{{site.location}}</p>
 
 
                 </div>

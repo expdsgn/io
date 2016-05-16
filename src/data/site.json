@@ -1,7 +1,6 @@
 {
     "title": "exp. design",
     "entity": "exp. design llc",
-    "url": "http://expdesign.io",
     "mission": "Moving social impact projects forward with design and technology.",
     "vision": "",
     "keywords": "",
@@ -12,7 +11,8 @@
     "hosts": ["expdesign.io"],
     "domain": "expdesign.io",
     "google": {
-        "tracking_id": "UA-70488413-1"
+        "tracking_id": "UA-70488413-1",
+        "site_verification": "WsabU98_LahGz3FOhbGFhyT-S-Z-mAVDluqfZhSJG0g"
     },
     "opengraph": {
         "title": "exp. design",
@@ -44,6 +44,7 @@
         "facebook": ["exp.page", "Facebook", "https://www.facebook.com/"],
         "twitter": ["expdsgn", "Twitter", "https://twitter.com/"]
     },
+    "location": "Based in Brooklyn, NY",
     "portfolio": ["/downloads/exp.portfolio-0.1.pdf", "Download Portfolio"],
     "resume": ["/downloads/exp.resume-0.1.pdf", "Download Resume"]
 }
