@@ -1,37 +1,46 @@
+
+
+'use strict'
+
+
 /**
- * Deps
+ * Requirements
  */
 
-var gulp = require('gulp'),
-    data = require('gulp-data'),
-    matter = require('gray-matter'),
-    twig = require('gulp-twig'),
-    resumePdfToJson = require('resume-pdf-to-json'),
-    htmlreplace = require('gulp-html-replace'),
-    fs = require('fs'),
-    path = require('path'),
-    extend = require('util')._extend,
-    rename = require('gulp-rename');
+const gulp = require('gulp'),
+      data = require('gulp-data'),
+      matter = require('gray-matter'),
+      twig = require('gulp-twig'),
+      resumePdfToJson = require('resume-pdf-to-json'),
+      htmlreplace = require('gulp-html-replace'),
+      fs = require('fs'),
+      path = require('path'),
+      extend = require('util')._extend,
+      rename = require('gulp-rename'),
+      marked = require('marked');
 
 
 /**
  * Constants
  */
 
-var BUILD = '../surge';
-var DATA = 'data/';
-var CONFIG = {
+const BUILD = '../surge';
+const DATA = 'data/';
+const CONFIG = {
     'styles': {
         src: 'styles',
-        tpl: '<link rel="stylesheet" href="%s/site.min.css">'
+        tpl: '<link rel="stylesheet" href="/%s/site.min.css">'
     },
     // 'scripts': {
     //     src: 'scripts',
-    //     tpl: '<script src="%s/site.min.js"></script>'
+    //     tpl: '<script src="/%s/site.min.js"></script>'
     // }
     // <!-- build:scripts -->
     // <!-- endbuild -->
 };
+
+const CONTENT_BLOG = 'blog';
+const TEMPLATES_POST = 'site/templates/base/page.post.twig';
 
 
 
@@ -42,27 +51,30 @@ var CONFIG = {
 function templates() {
 
 
-    var service = this;
+    let service = {};
 
     service.matter = matterservice;
     service.pdftojson = pdftojsonservice;
     service.site = site;
     service.route = route;
+    service.readblog = readblog;
 
-    var src = [
+    let src = [
         'site/*.twig',
         '!site/sitemap.xml.twig',
         '!site/resume.twig'
     ];
 
-    var resume = 'site/resume.twig';
-    var sitemap = 'site/sitemap.xml.twig';
+    let resume = 'site/resume.twig';
+    let sitemap = 'site/sitemap.xml.twig';
+    let blog = CONTENT_BLOG;
+    let post = TEMPLATES_POST;
 
 
     function site(data, file) {
+
         try {
             var name = (file) ? path.basename(file.path).split('.')[0] : 'site';
-            // name = name || 'site';
             var d = fs.readFileSync(DATA + name + '.json', 'utf8');
             if (name === 'site') {
                 data[name] = JSON.parse(d);
@@ -70,49 +82,88 @@ function templates() {
                 data = extend(data, JSON.parse(d));
             }
         } catch(e) {}
+
         return data;
+
     }
 
     function route(data, file) {
-        var r = file.path.split('site/')[1];
+
+        let r = file.path.split('site/')[1];
         r = r.split('.')[0];
         data.route = (r === 'index') ? '' : '/' + r;
+
         return data;
+
     }
 
     function matterservice(file) {
-        var f = file;
-        var m = matter(String(f.contents));
-        // var name = path.basename(file.path).split('.')[0];
-        var data = service.site(m.data);
+
+        let f = file;
+        let m = matter(String(f.contents));
+        let data = service.site(m.data);
 
         data = service.site(data, f);
-        // data = service.url(data, file);
 
-        // file.contents = new Buffer(m.content);
-        // get site data
-        // m.data = service.site(m.data);
         // get page data if it exits
         data = service.route(data, f);
-        // console.log(name);
-        // data = service.site(data, file);
 
         return data;
+
     }
 
     function pdftojsonservice(file) {
 
-        var path = DATA + 'DevonHirth.pdf';
-        var output = DATA + 'DevonHirth.json';
+        let path = DATA + 'DevonHirth.pdf';
+        let output = DATA + 'DevonHirth.json';
 
         return resumePdfToJson(path, {'output': output})
             .then(function(data) {
-                var mdata = service.matter(file);
+                let mdata = service.matter(file);
                 mdata.resume = data;
                 return mdata;
             });
 
     }
+
+    function readblog(err, files) {
+
+        for (let i = 0; i < files.length; i++) {
+
+            let slug = files[i].split('.')[1];
+            let date = files[i].split('.')[0];
+
+            fs.readFile(`${blog}/${files[i]}`, 'utf8', function(err, d){
+
+                let title = d.split('\n')[0].replace(/#/g, '').trim();
+                let content = d.split('\n');
+
+                content.splice(0, 1); // remove extra title
+                content = content.join('\n');
+
+                let c = {
+                    'title': title,
+                    'content': marked(content),
+                    'published': date,
+                    'slug': slug
+                };
+
+                // add site data
+                c = service.site(c);
+
+                gulp.src(post)
+                    .pipe(data(c))
+                    .pipe(twig())
+                    .pipe(htmlreplace(CONFIG))
+                    .pipe(rename(`${slug}.html`))
+                    .pipe(gulp.dest(`${BUILD}/blog`));
+
+            });
+
+        }
+
+    }
+
 
     // General Templates
     gulp.src(src)
@@ -133,11 +184,16 @@ function templates() {
         .pipe(htmlreplace(CONFIG))
         .pipe(gulp.dest(BUILD));
 
+    // Sitemap
     gulp.src(sitemap)
         .pipe(data(service.matter))
         .pipe(twig())
         .pipe(rename('sitemap.xml'))
         .pipe(gulp.dest(BUILD));
+
+    // Blog
+    fs.readdir(blog, service.readblog);
+
 
 }
 

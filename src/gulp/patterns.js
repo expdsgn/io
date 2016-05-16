@@ -2,22 +2,27 @@
  * Deps
  */
 
-var gulp = require('gulp'),
-    concat = require('gulp-concat'),
-    data = require('gulp-data'),
-    nano = require('gulp-cssnano'),
-    sourcemaps = require('gulp-sourcemaps'),
-    rename = require('gulp-rename'),
-    stylus = require('stylus'),
-    es = require('event-stream'),
-    addsrc = require('gulp-add-src');
+const gulp = require('gulp'),
+      concat = require('gulp-concat'),
+      data = require('gulp-data'),
+      nano = require('gulp-cssnano'),
+      sourcemaps = require('gulp-sourcemaps'),
+      rename = require('gulp-rename'),
+      stylus = require('stylus'),
+      es = require('event-stream'),
+      addsrc = require('gulp-add-src');
 
 
 /**
  * Constants
  */
 
-var BUILD = '../surge';
+const BUILD = '../surge';
+const FONTS = [
+    'Siro-ExtraLight',
+    'Siro-Light',
+    'Siro-SemiBold'
+]
 
 
 /**
@@ -26,14 +31,8 @@ var BUILD = '../surge';
 
 function fonts() {
 
-    var src = [
-        'Siro-ExtraLight',
-        'Siro-Light',
-        'Siro-SemiBold'
-    ];
-
-    for (var i = src.length - 1; i >= 0; i--) {
-        gulp.src('fonts/' + src[i] + '.{ttf,woff,eot,svg}')
+    for (var i = FONTS.length - 1; i >= 0; i--) {
+        gulp.src('site/fonts/' + FONTS[i] + '.{ttf,woff,eot,svg}')
             .pipe(gulp.dest(BUILD + '/fonts'));
     }
 

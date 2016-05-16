@@ -22,6 +22,7 @@ CVS
 *.key
 *.pem
 *.crt
+credentials.json
 
 # builds and temp files
 surge/*
