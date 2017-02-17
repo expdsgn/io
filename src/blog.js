@@ -6,37 +6,37 @@
  * Requirements
  */
 
-const gulp = require('gulp'),
-      medium = require('medium-sdk'),
-      fs = require('fs'),
-      data = require('gulp-data'),
-      twig = require('gulp-twig'),
-      htmlreplace = require('gulp-html-replace'),
-      rename = require('gulp-rename'),
-      marked = require('marked');
+const medium = require('medium-sdk'),
+      fs = require('fs');//,
+      //gulp = require('gulp'),
+      // data = require('gulp-data'),
+      // twig = require('gulp-twig'),
+      // htmlreplace = require('gulp-html-replace'),
+      // rename = require('gulp-rename'),
+      // marked = require('marked');
 
 
 /**
  * Constants
  */
 
-const SRC_CONTENT = '../blog';
+const SRC_CONTENT = 'blog';
 const SPACE = '-';
-const CREDS = JSON.parse(fs.readFileSync('../../credentials.json', 'utf8'));
-const TEMPLATES_POST = '../site/blog/post.twig';
-const BUILD = '../../surge/blog';
-const REPLACE = {
-    'styles': {
-        src: 'styles',
-        tpl: '<link rel="stylesheet" href="/%s/site.min.css">'
-    },
-    // 'scripts': {
-    //     src: 'scripts',
-    //     tpl: '<script src="/%s/site.min.js"></script>'
-    // }
-    // <!-- build:scripts -->
-    // <!-- endbuild -->
-};
+const CREDS = JSON.parse(fs.readFileSync('../credentials.json', 'utf8'));
+// const TEMPLATES_POST = '../site/blog/post.twig';
+// const BUILD = '../../surge/blog';
+// const REPLACE = {
+//     'styles': {
+//         src: 'styles',
+//         tpl: '<link rel="stylesheet" href="/%s/site.min.css">'
+//     },
+//     // 'scripts': {
+//     //     src: 'scripts',
+//     //     tpl: '<script src="/%s/site.min.js"></script>'
+//     // }
+//     // <!-- build:scripts -->
+//     // <!-- endbuild -->
+// };
 
 const CLIENT = new medium.MediumClient({
     clientId: CREDS.MEDIUM.ID,
@@ -61,16 +61,16 @@ function post(err, user) {
         .replace(/ +/g, SPACE);
 
     let content = false;
-    let src = TEMPLATES_POST;
-    let dest = BUILD;
-    let rep = REPLACE;
+    // let src = TEMPLATES_POST;
+    // let dest = BUILD;
+    // let rep = REPLACE;
 
 
     let service = {};
 
     service.read = read;
     service.publish = publish;
-    service.templates = templates;
+    // service.templates = templates;
 
 
     fs.readdir(SRC_CONTENT, service.read);
@@ -106,7 +106,7 @@ function post(err, user) {
             function(err, post) {
                 if (!err) {
                     console.log(`Success: Published "${post.title}" as ${post.publishStatus}. ${post.url}`);
-                    service.templates(post, content);
+                    //service.templates(post, content);
                     return;
                 }
                 console.log(`Error: ${err}`);
@@ -115,21 +115,21 @@ function post(err, user) {
 
     }
 
-    function templates(post, content) {
+    // function templates(post, content) {
 
-        let d = post;
+    //     let d = post;
 
-        // compile markdown content to html
-        d.content = marked(content);
+    //     // compile markdown content to html
+    //     d.content = marked(content);
 
-        gulp.src(src)
-            .pipe(data(d))
-            .pipe(twig())
-            .pipe(htmlreplace(rep))
-            .pipe(rename(`${title()}.html`))
-            .pipe(gulp.dest(dest));
+    //     gulp.src(src)
+    //         .pipe(data(d))
+    //         .pipe(twig())
+    //         .pipe(htmlreplace(rep))
+    //         .pipe(rename(`${title()}.html`))
+    //         .pipe(gulp.dest(dest));
 
-    }
+    // }
 
 }
 

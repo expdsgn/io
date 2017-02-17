@@ -1,0 +1,11 @@
+{
+    "title": "Resume",
+    "skills": [
+      "Design Research",
+      "Identity Design",
+      "Interface Design",
+      "Front-end Web Development",
+      "Data Visualization"
+    ],
+    "skip": ["Devon Hirth", "Summary", "Skills & Expertise"]
+}

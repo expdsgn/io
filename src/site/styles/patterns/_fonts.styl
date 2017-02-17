@@ -18,10 +18,11 @@ font-face('Siro SemiBold', 'Siro-SemiBold', normal, weight-semibold)
 body
     color color-base
     {font-light}
-    {font-smooth}
+    // {font-smooth}
 
 h1, .h1, h2, .h2, h3, .h3
     {font-light}
+    {font-smooth}
     // letter-spacing 0.025em
     margin-bottom 20px
 
@@ -44,6 +45,9 @@ h3, .h3
 
 .font-semibold
     {font-semibold}
+
+.font-smooth
+    {font-smooth}
 
 for i in (1..6)
     * > h{i}:first-child

@@ -24,8 +24,9 @@
 
                     <div class="col3 col12@medium">
 
-                        <h2 class="shim@36x add-none">{{site.author}}</h2><br>
+                        <h2 class="shim@36x add-none">{{site.author}}</h2>
 
+                        <h3 class="shim@24x add-none">Contact</h3>
                         {{site.domain}}<br>
 
                         <label for="formHire" class="cursor-pointer c-red">
@@ -38,6 +39,11 @@
                            itemprop="email">
                             {{site.contacts.phone[0]}}
                         </a><br>
+
+                        <h3 class="shim@24x add-none">Skills</h3>
+                        {% for s in skills %}
+                        {{s}}<br>
+                        {% endfor %}
 
                     {% spaceless %}</div>
 
