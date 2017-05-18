@@ -1,4 +1,4 @@
-<div class="pad-left pad-right pad-bottom pad-none@small bg-white font-smooth">
+<div class="pad-left pad-right pad-bottom pad-none@small bg-white font-smooth fs-small">
 
     <footer class="bg-black">
 
@@ -29,7 +29,9 @@
 
                 </div>
 
-                <div class="col2 pad-top col6@medium t-center@medium add-bottom@3x@medium">
+                <div class="col5 d-none@medium">&nbsp;</div>
+
+                <div class="col2 pad-top col6@medium t-center@medium add-bottom@3x@medium t-right">
 
                     <nav class="nav nav-stack">
 
@@ -63,19 +65,13 @@
 
                 </div>
 
-                <div class="col2 pad-top col6@medium t-center@medium add-bottom@3x@medium">
+                <div class="col2 pad-top col6@medium t-center@medium add-bottom@3x@medium t-right">
 
                     <nav class="nav nav-stack">
                         {% for s in site.social %}
                         <a href="{{s[2]}}{{s[0]}}" title="{{site.title}} on {{s[1]}}" rel="nofollow" class="inherit">{{s[1]}}</a><br>
                         {% endfor %}
                     </nav>
-
-                </div>
-
-                <div class="col5 col12@medium pad-top">
-
-                    {% include '../components/form.signup.twig' with {'id':'signup-footer'} %}
 
                 </div>
 

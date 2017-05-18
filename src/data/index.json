@@ -1,6 +1,9 @@
 {
     "text": "Product Design For Social Impact.",
-    "quote": "Experiences are moments facilitated by design. Often these moments are solutions to problems – created to help us live more fulfilling lives.",
+    "intro": [
+        "Experiences are moments facilitated by design. Often these moments are solutions to problems – created to help us live more fulfilling lives.",
+        "<span class='c-red'>exp. design</span> provides digital product design and front-end engineering for social impact companies and organizations."
+    ],
     "capabilities": [
         {
             "name": "Identity Design",
@@ -25,25 +28,73 @@
     ],
     "current": [
         {
-            "client": "Clark",
-            "role": "Digital product designer and front-end web developer",
-            "about": "Clark is an automated administrative assistant for tutors and indepentent educators.",
-            "description": "I'm helping Clark execute their brand over their web application and marketing sites through the design of new interfaces, creating a reusable css pattern library, and building javascript components for their web applications.",
-            "color": "#EA4900"
+            "client": "DaisyDebt",
+            "intro": "A nonprofit-tech organization helping financial counselors find the best outcomes for their clients.",
+            "color": "#06C7D9",
+            "url": "https://daisydebt.org",
+            "wrap": {
+                "class": "t-center"
+            },
+            "logo": {
+                "src": "daisydebt.logo.svg",
+                "width": "261",
+                "height": "71",
+                "class": "add-top-3x pad-top-2x",
+                "style": ""
+            },
+            "thumb": {
+                "src": "daisydebt.thumb.svg",
+                "width": "164",
+                "height": "155",
+                "class": "add-top-3x",
+                "style": ""
+            }
         },
         {
-            "client": "DaisyDebt",
-            "role": "Co-founder, Lead Product Designer and Engineer",
-            "about": "",
-            "description": "",
-            "color": "#06C7D9"
+            "client": "Clark",
+            "intro": "An ed-tech startup bridging the education gap by engaging independent educators.",
+            "color": "#EA4900",
+            "url": "https://hiclark.com",
+            "wrap": {
+                "class": "t-center"
+            },
+            "logo": {
+                "src": "clark.logo.svg",
+                "width": "97",
+                "height": "17",
+                "class": "add-top-3x pad-top",
+                "style": ""
+            },
+            "thumb": {
+                "src": "clark.thumb.png",
+                "width": "240",
+                "height": "466",
+                "class": "p-absolute",
+                "style": "margin-bottom:-180px;margin-left:-120px;left:50%;bottom:0;"
+            }
         },
         {
             "client": "hellosmile",
-            "role": "",
-            "about": "",
-            "description": "",
-            "color": "#EFEFEF"
+            "intro": "A dental care network providing innovative community healthcare.",
+            "color": "#FE4682",
+            "url": "https://www.hellosmile.com",
+            "wrap": {
+                "class": "t-right"
+            },
+            "logo": {
+                "src": "hellosmile.logo.svg",
+                "width": "106",
+                "height": "67",
+                "class": "add-right-3x add-top-3x",
+                "style": ""
+            },
+            "thumb": {
+                "src": "hellosmile.thumb.png",
+                "width": "350",
+                "height": "350",
+                "class": "p-absolute p-bottom p-left",
+                "style": "margin-left:-53px;margin-bottom:-53px"
+            }
         }
     ]
 }

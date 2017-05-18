@@ -6,236 +6,157 @@
 {% block content %}
 <section class="vh-100 d-flex fa-center bg-white c-blue@s1">
 
-    <div class="wrap-mid1 wrap-mid0@medium">
+    <div class="d-flex jc-center w-100">
 
-        <div class="d-flex fa-center">
+        <div class="w-400px pad-horizontal">
 
-            <div class="w-100 animated fadeInUp">
+            <h1 class="hidden">{{site.title}}</h1>
 
-                <div class="row row-top t-center t-left@medium">
+            <div class="add-right-2x">
+                {% include 'icons/svg/expdesign.logo.twig' with {'color':'red'} %}
+            </div>
 
-                    <div class="col4 col8@medium">
+            {% for i in intro %}
+            <p>{{ i }}</p>
+            {% endfor %}
 
-                        <div class="add-top pad-right-3x pad-none@medium">
+            <div class="t-center pad-top-2x">
 
-                            <span class="hidden">{{site.title}}</span>
+                <p>
+                    <a href="about" class="c-red" title="About">Learn more</a>
+                </p>
 
-                            {% include 'icons/svg/expdesign.logo.twig' with {'color':'red'} %}
-
-                            <label class="btn btn-large btn-block c-red b-red d-none@medium" for="formHire">
-
-                                <span>Available for Hire</span>
-
-                            </label>
-
-                        </div>
-
-                    {% spaceless %}</div>
-
-                    <div class="col7 t-left col12@medium">{% endspaceless %}
-
-                        <h1 class="h2@medium">{{text}}</h1>
-
-                        <label class="btn btn-large c-red b-red d-none d-inline-block@medium add-bottom-2x" for="formHire">
-
-                            <span>Available for Hire</span>
-
-                        </label>
-
-                    </div>
-
-                    <div class="col11 col12@medium pad-vertical-3x pad-top@medium pad-bottom-2x@medium b-top b-bottom b-gray@t2">
-
-                        <nav class="nav c-red row">{% spaceless %}
-
-                            <span class="col3 col6@medium">
-                                <a href="/#capabilities" title="Capabilities">Capabilities</a>
-                            </span>
-
-                            <span class="col3 col6@medium">
-                                <a href="/about" title="About">About</a>
-                            </span>
-
-                            <span class="col3 col6@medium">
-                                <a href="/portfolio" title="View Portfolio">Portfolio</a>
-                            </span>
-
-                            <span class="col3 col6@medium">
-                                <a href="/resume" title="View Resume">Resume</a>
-                            </span>
-
-                        {% endspaceless %}</nav>
-
-                    </div>
-
-                </div>
-
-
+                <p>
+                    <a href="#work" class="c-red" title="Main">
+                        ↓ See work and capabilities ↓
+                    </a>
+                </p>
 
             </div>
 
-
         </div>
 
     </div>
 
 </section>
 
-<section class="pad-horizontal bg-white">
+<main>
 
-    <div class="vh-50-pad d-flex fa-center bg-red font-smooth">
+    <section id="work" class="bg-white c-blue@s1 t-center pad-vertical-3x">
 
-        <div class="wrap-mid1">
+        <div class="pad-vertical-3x add-bottom-3x">
 
-            <blockquote class="bq-left bq-left-none@medium fs-large@medium add-none@medium">{{quote}}</blockquote>
+            <h2 class="t-center pad-bottom-3x">Work</h2>
 
-        </div>
+            {% for index, c in current %}
+            <div class="d-inline-block pad-bottom-3x w-400px {% if index != current.length - 1 %}add-right add-none@medium{% endif %}">
 
-    </div>
+                <div class="w-100 h-400px p-relative o-hidden {{c.wrap.class}}" style="background-color:{{c.color}}">
 
-</section>
+                    <img src="portfolio/{{c.logo.src}}"
+                        width="{{c.logo.width}}"
+                        height="{{c.logo.height}}"
+                        class="{{c.logo.class}}">
 
-<section id="capabilities" class="bg-white c-blue@s1">
-
-    <div class="wrap-max">
-
-        <div class="vh-100 d-flex fa-center">
-
-            <div class="w-100 shim@84x">
-
-                <h2 class="t-center">Capabilities</h2>
-
-                <div class="row t-center pad-top@3x pad-bottom d-none d-block@medium">
-
-                    <div class="col12">
-
-                        <div class="pad-horizontal-3x add-right@small add-left@small pad-right@small pad-left@small">
-
-                            {% include 'icons/svg/capabilities.twig' %}
-
-                        </div>
-
-                    </div>
+                    <img class="{{c.thumb.class}}"
+                        src="portfolio/{{c.thumb.src}}"
+                        width="{{c.thumb.width}}"
+                        height="{{c.thumb.height}}"
+                        style="{{c.thumb.style}}">
 
                 </div>
 
-                <div class="row t-center add-vertical-3x pad-vertical-3x add-top@medium">
-                    {% spaceless %}
+                <div class="t-left pad-horizontal pad-top">
+                    <p>{{c.intro}}</p>
+                    <p class="t-center pad-top-2x">
+                        <a href="{{c.url}}" class="c-red">View Site</a>
+                    </p>
+                </div>
 
-                    <div class="col3 col6@medium col12@small va-top t-left">
+            </div>
+            {% endfor %}
 
-                        {% for i in range(0, 1) %}
-                        <div class="card add-bottom-3x pad-bottom-3x">
-                            <div class="card_wrap@216x">
-                                <h3 class="height@48x">{{capabilities[i].name}}</h3>
-                                <div class="fs-small pad-right">{{capabilities[i].text}}</div>
-                                <a class="c-red" href="{{capabilities[i].link}}" rel="nofollow" title="{{capabilities[i].name}} Examples">See Examples on Behance</a>
+        </div>
+
+    </section>
+
+    <section id="capabilities" class="bg-white c-blue@s1 pad-bottom-3x">
+
+        <div class="wrap-max pad-vertical-3x add-bottom-3x">
+
+            <div class="vh-100 d-flex fa-center">
+
+                <div class="w-100 shim@84x">
+
+                    <h2 class="t-center">Capabilities</h2>
+
+                    <div class="row t-center pad-top@3x pad-bottom d-none d-block@medium">
+
+                        <div class="col12">
+
+                            <div class="pad-horizontal-3x add-right@small add-left@small pad-right@small pad-left@small">
+
+                                {% include 'icons/svg/capabilities.twig' %}
+
                             </div>
-                        </div>
-                        {% endfor %}
-
-                    </div>
-
-                    <div class="col6 d-none@medium">
-
-                        <div class="pad-left-3x pad-right-3x">
-
-                            {% include 'icons/svg/capabilities.twig' %}
 
                         </div>
 
                     </div>
 
-                    <div class="col3 col6@medium col12@small t-left">
+                    <div class="row t-center add-vertical-3x pad-vertical-3x add-top@medium">
+                        {% spaceless %}
 
-                        {% for i in range(2, 3) %}
-                        <div class="card add-bottom-3x pad-bottom-3x">
-                            <div class="card_wrap@216x">
-                                <h3 class="height@48x">{{capabilities[i].name}}</h3>
-                                <div class="fs-small pad-right">{{capabilities[i].text}}</div>
-                                <a class="c-red" href="{{capabilities[i].link}}" rel="nofollow" title="{{capabilities[i].name}} Examples">See Examples on Behance</a>
+                        <div class="col3 col6@medium col12@small va-top t-left">
+
+                            {% for i in range(0, 1) %}
+                            <div class="card add-bottom-3x pad-bottom-3x">
+                                <div class="card_wrap@216x">
+                                    <h3 class="height@48x">{{capabilities[i].name}}</h3>
+                                    <div class="fs-small pad-right">{{capabilities[i].text}}</div>
+                                    <a class="c-red" href="{{capabilities[i].link}}" rel="nofollow" title="{{capabilities[i].name}} Examples">See Examples on Behance</a>
+                                </div>
                             </div>
+                            {% endfor %}
+
                         </div>
-                        {% endfor %}
+
+                        <div class="col6 d-none@medium">
+
+                            <div class="pad-left-3x pad-right-3x">
+
+                                {% include 'icons/svg/capabilities.twig' %}
+
+                            </div>
+
+                        </div>
+
+                        <div class="col3 col6@medium col12@small t-left">
+
+                            {% for i in range(2, 3) %}
+                            <div class="card add-bottom-3x pad-bottom-3x">
+                                <div class="card_wrap@216x">
+                                    <h3 class="height@48x">{{capabilities[i].name}}</h3>
+                                    <div class="fs-small pad-right">{{capabilities[i].text}}</div>
+                                    <a class="c-red" href="{{capabilities[i].link}}" rel="nofollow" title="{{capabilities[i].name}} Examples">See Examples on Behance</a>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+
+                        {% endspaceless %}
 
                     </div>
 
-                    {% endspaceless %}
-
                 </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-{# <section class="pad-horizontal pad-bottom bg-white">
-
-    <div class="row">
-
-        <div class="col7">
-
-            <div class="pad-right">
-                <div class="vh-100-pad w-100 bg-orange" style="background-color: {{current[0].color}}">
-
-                </div>
-            </div>
-
-        </div><div class="col5 row">
-
-            <div class="vh-50-pad w-100 bg-blue add-bottom" style="background-color: {{current[1].color}}">
-
-            </div>
-
-            <div class="vh-50-pad w-100 bg-blue" style="background-color: {{current[2].color}}">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section> #}
-
-{# <section class="vh-100 d-flex fa-center bg-white c-blue@s1">
-
-    <div class="wrap-max row t-center">
-
-        <div class="col3 t-left">
-
-            <div class="pad-bottom pad-right">
-                <div class="pad-left-3x height@312x d-flex fa-center">
-                    <h2 class="p-left-2 add-none">Currently, I'm working with...</h2>
-                </div>
-            </div>
-
-            <div class="pad-bottom pad-right">
-                <div class="height@312x w-100 bg-blue" style="background-color: {{current[1].color}}">
-
-                </div>
-            </div>
-
-        </div><div class="col3 t-left">
-
-            <div class="pad-bottom pad-right">
-                <div class="height@312x w-100 bg-orange" style="background-color: {{current[0].color}}">
-
-                </div>
-            </div>
-
-            <div class="pad-bottom pad-right">
-                <div class="height@312x w-100 bg-blue" style="background-color: {{current[2].color}}">
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section> #}
+</main>
 
 {% endblock %}
