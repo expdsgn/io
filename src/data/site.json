@@ -46,6 +46,6 @@
         "dribbble": ["expdsgn", "Dribbble", "https://dribbble.com/"]
     },
     "location": "Based in Brooklyn, NY",
-    "portfolio": ["/downloads/exp.portfolio-0.1.pdf", "Download Portfolio"],
-    "resume": ["/downloads/exp.resume-0.3.pdf", "Download Resume"]
+    "portfolio": ["http://bit.ly/2nW56xK", "Download Portfolio"],
+    "resume": ["http://bit.ly/2mIb4kI", "Download Resume"]
 }

@@ -4,7 +4,9 @@
   "description": "Website for expdesign.io",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "",
+    "start": "cd ../surge; browser-sync start --files '*, **/*' --server --no-open",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",

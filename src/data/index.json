@@ -22,5 +22,28 @@
             "text": "<p>Data drives your organization and visualizations communicate complex ideas and identify patterns to all of your stakeholders.</p>",
             "link": "http://bit.ly/1Sc5UvU"
         }
+    ],
+    "current": [
+        {
+            "client": "Clark",
+            "role": "Digital product designer and front-end web developer",
+            "about": "Clark is an automated administrative assistant for tutors and indepentent educators.",
+            "description": "I'm helping Clark execute their brand over their web application and marketing sites through the design of new interfaces, creating a reusable css pattern library, and building javascript components for their web applications.",
+            "color": "#EA4900"
+        },
+        {
+            "client": "DaisyDebt",
+            "role": "Co-founder, Lead Product Designer and Engineer",
+            "about": "",
+            "description": "",
+            "color": "#06C7D9"
+        },
+        {
+            "client": "hellosmile",
+            "role": "",
+            "about": "",
+            "description": "",
+            "color": "#EFEFEF"
+        }
     ]
 }
