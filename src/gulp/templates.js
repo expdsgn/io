@@ -58,11 +58,13 @@ function templates() {
     service.site = site;
     service.route = route;
     service.readblog = readblog;
+    service.dest = dest;
 
     let src = [
         'site/*.twig',
-        '!site/sitemap.xml.twig',
-        '!site/resume.twig'
+        'site/work/*.twig',
+        '!site/sitemap.xml.twig'//,
+        //'!site/resume.twig'
     ];
 
     let resume = 'site/resume.twig';
@@ -81,7 +83,9 @@ function templates() {
             } else {
                 data = extend(data, JSON.parse(d));
             }
-        } catch(e) {}
+        } catch(e) {
+            // console.log(e);
+        }
 
         return data;
 
@@ -164,6 +168,16 @@ function templates() {
 
     }
 
+    function dest(file) {
+
+        let dir = __dirname.split('/').slice(0, -1).join('/') + '/site';
+
+        dir = path.dirname(file.path).replace(dir, '');
+
+        return BUILD + '/' + dir;
+
+    }
+
 
     // General Templates
     gulp.src(src)
@@ -174,15 +188,15 @@ function templates() {
         // replace html build blocks
         .pipe(htmlreplace(CONFIG))
         // pipe file to the build destination
-        .pipe(gulp.dest(BUILD));
+        .pipe(gulp.dest(service.dest));
 
     // Resume
-    gulp.src(resume)
-        // Unique Resume Data Pipe
-        .pipe(data(service.pdftojson))
-        .pipe(twig())
-        .pipe(htmlreplace(CONFIG))
-        .pipe(gulp.dest(BUILD));
+    // gulp.src(resume)
+    //     // Unique Resume Data Pipe
+    //     .pipe(data(service.pdftojson))
+    //     .pipe(twig())
+    //     .pipe(htmlreplace(CONFIG))
+    //     .pipe(gulp.dest(BUILD));
 
     // Sitemap
     gulp.src(sitemap)
@@ -192,7 +206,7 @@ function templates() {
         .pipe(gulp.dest(BUILD));
 
     // Blog
-    fs.readdir(blog, service.readblog);
+    // fs.readdir(blog, service.readblog);
 
 
 }

@@ -7,7 +7,7 @@
     "author": "Devon Hirth",
     "color": "#dd3335",
     "favicons": "favicons/",
-    "protocol": "https://",
+    "protocol": "http://",
     "hosts": ["expdesign.io"],
     "domain": "expdesign.io",
     "google": {
@@ -17,7 +17,7 @@
     "opengraph": {
         "title": "exp. design",
         "type": "website",
-        "url": "https://expdesign.io",
+        "url": "http://expdesign.io",
         "image": "",
         "imagetype": "",
         "imageheight": "",
@@ -35,7 +35,7 @@
     },
     "contacts": {
         "general": ["devon@expdesign.io", "Information"],
-        "phone": ["347.927.2397", "Phone Number"]
+        "phone": ["347.506.8810", "Phone Number"]
     },
     "social": {
         "behance": ["expdsgn", "Behance", "https://www.behance.net/"],
@@ -47,5 +47,5 @@
     },
     "location": "Based in Brooklyn, NY",
     "portfolio": ["http://bit.ly/2nW56xK", "Download Portfolio"],
-    "resume": ["http://bit.ly/2mIb4kI", "Download Resume"]
+    "resume": ["http://bit.ly/2tJCdZy", "Download Resume"]
 }
