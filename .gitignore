@@ -25,8 +25,8 @@ CVS
 credentials.json
 
 # builds and temp files
-surge/*
 temp/*
 
 # npm
-src/node_modules/*
+/node_modules/*
+/npm-debug.log

@@ -1,0 +1,116 @@
+/**
+ * Dependencies
+ */
+
+@require 'grid.vars.styl';
+@require 'fonts.vars.styl';
+@require 'fonts.mixins.styl';
+
+
+/**
+ * Tasks
+ */
+
+font-face('Siro Extra Light', 'Siro-ExtraLight', normal, weight-thin)
+font-face('Siro Light', 'Siro-Light', normal, weight-light)
+font-face('Siro SemiBold', 'Siro-SemiBold', normal, weight-semibold)
+
+body
+    color color-base
+    {font-light}
+    // {font-smooth}
+
+h1, .h1, h2, .h2, h3, .h3
+    {font-light}
+    {font-smooth}
+    // letter-spacing 0.025em
+    margin-bottom 20px
+
+h1, .h1
+    {font-thin}
+    {h1}
+
+h2, .h2
+    {h2}
+
+h3, .h3
+    {font-semibold}
+    {h3}
+
+.font-thin
+    {font-thin}
+
+.font-light
+    {font-light}
+
+.font-semibold
+    {font-semibold}
+
+.font-smooth
+    {font-smooth}
+
+for i in (1..6)
+    * > h{i}:first-child
+        margin-top 0px
+
+input, button,
+select, textarea
+    {font-light}
+
+select, textarea, input
+    {font-aliased}
+
+body
+    font-size 16px
+    line-height 24px
+
+small
+    font-size 80%
+
+blockquote
+    font-size 36px
+    line-height 46px
+
+.bq-left
+    border-left 12px solid rgba(0, 0, 0, 0.09)
+    padding-left 20px
+
+.bq-right
+    border-right 12px solid rgba(0, 0, 0, 0.09)
+    padding-right 20px
+
+.fs-large
+    {large}
+
+.fs-small
+    {small}
+
+for _b, b in breaks
+    @media only screen and (max-width : b)
+        .h1{'\@'}{_b}
+            {font-thin}
+            {h1}
+
+        .h2{'\@'}{_b}
+            {h2}
+
+        .h3{'\@'}{_b}
+            {font-semibold}
+            {h3}
+
+        .bq-left-none{'\@'}{_b}
+            border-left none
+            padding-left inherit
+
+        .bq-right-none{'\@'}{_b}
+            border-right none
+            padding-right inherit
+
+        .fs-large{'\@'}{_b}
+            {large}
+
+        .fs-small{'\@'}{_b}
+            {small}
+
+
+

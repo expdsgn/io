@@ -1,0 +1,50 @@
+
+
+{% extends "html.twig" %}
+
+
+{% block body %}
+<body>
+
+    {% include '../components/header.twig' %}
+
+    <section class="bg-white c-blue@s1">
+
+        <div class="wrap-max">
+
+            <div class="t-center b-bottom b-gray@t2 pad-vertical-3x">
+
+                <a href="{{site.portfolio[0]}}" title="{{site.portfolio[1]}}" class="btn btn-large c-red b-red">{{site.portfolio[1]}}</a>
+
+            </div>
+
+            {% block content %}{% endblock %}
+
+        </div>
+
+    </section>
+
+    <section class="pad bg-white">
+
+        <div class="vh-100 d-flex fa-center bg-red">
+
+            <div class="wrap-mid1 t-center">
+
+                <blockquote class="bg-red fs-large@medium">
+                    View More Work on <a href="http://bit.ly/1SIK1zc" title="View More Work on Behance" rel="nofollow">Behance</a>
+                </blockquote>
+
+                <a href="{{site.portfolio[0]}}" title="{{site.portfolio[1]}}" class="btn btn-large">{{site.portfolio[1]}}</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include '../components/contact.twig' %}
+
+    {% include '../components/footer.twig' %}
+
+</body>
+{% endblock %}

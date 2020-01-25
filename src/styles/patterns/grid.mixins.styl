@@ -1,0 +1,18 @@
+
+
+horizontalsverticals(base, namespace, attribute, multiplier = 1, breakpoint = '')
+
+    ns = breakpoint
+
+    if multiplier != 1
+        ns = '-' + multiplier + 'x' + breakpoint
+
+    val = base * multiplier
+
+    .{namespace}-horizontal{ns}
+        {attribute}-left val
+        {attribute}-right val
+
+    .{namespace}-vertical{ns}
+        {attribute}-top val
+        {attribute}-bottom val

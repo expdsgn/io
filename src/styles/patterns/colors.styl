@@ -1,0 +1,57 @@
+/**
+ * Dependencies
+ */
+
+@require 'colors.vars.styl';
+@require 'colors.mixins.styl';
+
+
+/**
+ * Tasks
+ */
+
+// neutral backgrounds
+for _name, _neutral in neutrals
+    bg-selector _name, _neutral
+    transparencies _name, _neutral
+    tintsandshades _name, _neutral, neutraltints
+    tintsandshades _name, _neutral, neutralshades
+
+// color backgrounds
+for _name, _rgb in rgbs
+    bg-selector _name, _rgb
+    transparencies _name, _rgb
+    tintsandshades _name, _rgb, tints
+    tintsandshades _name, _rgb, shades
+
+// neutral colors
+for _name, _neutral in neutrals
+    c-selector _name, _neutral
+    tintsandshades _name, _neutral, neutraltints, false
+    tintsandshades _name, _neutral, neutralshades, false
+
+// color colors
+for _name, _rgb in rgbs
+    c-selector _name, _rgb
+    tintsandshades _name, _rgb, tints, false
+    tintsandshades _name, _rgb, shades, false
+
+
+/**
+ * Other Selectors
+ */
+
+.bg-transparent
+    background transparent
+
+.b-transparent
+    border-color transparent
+
+.c-transparent
+    color transparent
+
+.f-transparent
+    fill transparent
+
+.s-transparent
+    stroke transparent

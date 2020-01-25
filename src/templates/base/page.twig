@@ -1,0 +1,39 @@
+
+
+{% extends "html.twig" %}
+
+
+{% block body %}
+<body>
+
+    {% include '../components/header.twig' %}
+
+    <div class="bg-white c-blue@s1">
+
+        <div class="wrap-mid0 wrap-min@min pad-horizontal">
+
+            <div class="vh-100 d-flex fa-center">
+
+                <div class="w-100 shim@84x">
+
+                    <h1>{{title}}</h1>
+
+                    {% block content %}{% endblock %}
+
+                    <div class="shim@84x"></div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% include '../components/contact.twig' %}
+
+    {% include '../components/footer.twig' %}
+
+</body>
+{% endblock %}

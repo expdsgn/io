@@ -1,0 +1,25 @@
+
+
+{% extends "templates/base/page.resume.twig" %}
+
+
+{% block content %}
+
+    {% for index, r in resume %}
+        {% if r.head[0] not in skip %}
+
+        <h2 class="shim@36x add-none">{{r.head[0]}}</h2>
+        {% if r.head[1]|length > 1 %}<p>{{r.head[1]}} {{r.head[2]}}</p>{% endif %}
+
+        {% if r.text|length > 0 %}<p>{{r.text}}</p>{% endif %}
+
+        {% for s in r.sections %}
+        <h3 class="shim@24x add-none">{{s.head[0]}}</h3>
+        <p class="add-none">{{s.head[1]}} {{s.head[2]}}</p>
+        <p>{{s.text}}</p>
+        {% endfor %}
+
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
