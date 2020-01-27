@@ -6,7 +6,8 @@
   "scripts": {
     "test": "",
     "start": "cd ../surge; browser-sync start --files '*, **/*' --server --no-open",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "publish": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
