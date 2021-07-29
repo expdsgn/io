@@ -21,6 +21,6 @@ layout: '../../../_includes/layouts/exp.pug'
   Find out more about me from my [personal site](https://devonhirth.com) or on [LinkedIn](https://www.linkedin.com/in/devonhirth).
 
   <div class='pb-3 mb-6'>
-    <a href='work' class='btn btn-primary'>View work</a>
+    <a href='/work' class='btn btn-primary'>View work</a>
   </div>
 </section>
