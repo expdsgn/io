@@ -1,0 +1,211 @@
+:root {
+  /**
+   * Spacing
+   */
+
+  --dh-grid: 8px;
+
+  --dh-space-0: 0px;
+  --dh-space-half: calc(var(--dh-grid) / 2);
+  --dh-space-1: var(--dh-grid);
+  --dh-space-2: calc(var(--dh-grid) * 2);
+  --dh-space-3: calc(var(--dh-grid) * 3);
+  --dh-space-4: calc(var(--dh-grid) * 4);
+  --dh-space-5: calc(var(--dh-grid) * 5);
+  --dh-space-6: calc(var(--dh-grid) * 6);
+  --dh-space-7: calc(var(--dh-grid) * 7);
+  --dh-space-8: calc(var(--dh-grid) * 8);
+
+  /**
+   * Media
+   */
+
+  --dh-screen-xlarge: 1441px;
+  --dh-screen-large: 1280px;
+  --dh-screen-desktop: 960px;
+  --dh-screen-tablet: 768px;
+  --dh-screen-mobile: 480px;
+  --dh-screen-small: 400px;
+
+  /**
+   * Borders
+   */
+
+  --dh-border-0: 0px;
+  --dh-border-1: 1px;
+  --dh-border-2: 2px;
+  --dh-border-3: 3px;
+  --dh-border-4: 4px;
+  --dh-border-5: 5px;
+  --dh-border-6: 6px;
+  --dh-border-7: 7px;
+  --dh-border-8: 8px;
+
+  --dh-border-default: var(--dh-border-2);
+
+  /**
+   * Inputs (Text, Select, Options)
+   */
+
+  --dh-input-font-weight: 400;
+  --dh-input-font-size: 1em;
+
+  --dh-input-border-width: 2px;
+  --dh-input-border-radius: 2px;
+  --dh-input-border-style: solid;
+  --dh-input-stroke-width: 2px;
+  --dh-input-stroke-linecap: butt;
+  --dh-input-stroke-linejoin: round;
+  --dh-input-stroke-dasharray: 5 2;
+
+  --dh-input-border-color: inherit;
+
+  --dh-input-inner-size: 24px;
+  --dh-input-padding: calc(calc(var(--dh-grid) * 2) - var(--dh-input-border-width));
+
+  /**
+   * Focus
+   */
+
+  --dh-focus-width: 4px;
+  --dh-focus-gap: 1px;
+
+  /**
+   * Icons
+   */
+
+  --dh-icon-stroke: currentColor;
+  --dh-icon-stroke-width: 2;
+  --dh-icon-fill: none;
+}
+
+/**
+ * Print
+ */
+
+:root {
+  --dh-print-main-width: 8.5in;
+}
+
+@media print {
+  :root {
+    --dh-font-size: 14px;
+    --dh-line-height: 1.5;
+    --dh-type-margin: 16px;
+  }
+}
+
+:root {
+  /**
+   * Color
+   */
+
+  --dh-color-black: #455d68;
+  --dh-color-black-t1: #2e4149;
+
+  --dh-color-red: #dd3335;
+  --dh-color-white: #fdfeff;
+  --dh-color-white-t1: #eff7ff;
+
+  --dh-color-primary: var(--dh-color-red);
+
+  --dh-color-text: var(--dh-color-black);
+  --dh-color-background: var(--dh-color-white);
+  --dh-color-background-t1: var(--dh-color-white-t1);
+  --dh-color-hyperlinks: var(--dh-color-primary);
+  --dh-color-focus: var(--dh-color-primary);
+
+  /**
+   * Typography
+   */
+
+  --dh-font-family-primary: 'Inter var', sans-serif;
+  --dh-font-weight-primary-normal: 400;
+  --dh-font-weight-primary-bold: 700;
+  /* https://rsms.me/inter/lab/ */
+  --dh-font-features-primary: 'case' 0, 'cpsp', 'dlig' 0, 'frac', 'dnom' 0, 'numr' 0, 'salt' 0, 'subs' 0, 'sups' 0, 'tnum' 1, 'zero', 'ss01' 0, 'ss02', 'ss03' 0, 'ss04' 0, 'cv01', 'cv02', 'cv03', 'cv04', 'cv05' 0, 'cv06', 'cv07' 0, 'cv08' 0, 'cv09', 'cv10', 'cv11' 0, 'calt' 0, 'ccmp' 1, 'kern' 1;
+  /* --dh-line-height-primary: 1.8; */
+
+  --dh-font-family-secondary: 'Work Sans', sans-serif;
+  --dh-font-weight-secondary-normal: 400
+  --dh-font-weight-secondary-bold: 700;
+  --dh-font-features-secondary: 'case' 0, 'cpsp', 'dlig' 0, 'frac' 0, 'dnom' 0, 'numr' 0, 'salt' 0, 'subs' 0, 'sups' 0, 'tnum' 1, 'zero', 'ss01' 0, 'ss02', 'ss03' 0, 'ss04' 0, 'cv01', 'cv02', 'cv03', 'cv04', 'cv05' 0, 'cv06', 'cv07' 0, 'cv08' 0, 'cv09', 'cv10', 'cv11' 0, 'calt' 0, 'ccmp' 1, 'kern' 1;
+  /* --dh-line-height-secondary: 1.2; */
+
+  --dh-font-size: 18px;
+  --dh-line-height: 1.6;
+  --dh-letter-spacing: 0;
+  --dh-font-family: var(--dh-font-family-primary);
+  --dh-font-features: var(--dh-font-features-primary);
+
+  --dh-font-webkit-smoothing: auto;
+  --dh-font-moz-smoothing: auto;
+
+  --dh-font-weight-normal: 400;
+  --dh-font-weight-bold: 700;
+
+  --dh-font-size-h1: 4em;
+  --dh-font-size-h2: 3.33em;
+  --dh-font-size-h3: 2em;
+  --dh-font-size-h4: 1.66em;
+  --dh-font-size-h5: 1.33em;
+  --dh-font-size-h6: 1em;
+
+  --dh-font-family-headings: var(--dh-font-family-primary);
+  --dh-line-height-headings: 1.2;
+  --dh-font-weight-headings: var(--dh-font-weight-bold);
+
+  --dh-font-size-blockquote: 3.33em;
+  --dh-font-family-blockquote: var(--dh-font-family-secondary);
+  --dh-line-height-blockquote: 1.2;
+
+  --dh-font-size-small: 0.875em;
+
+  --dh-font-weight-hyperlinks: var(--dh-font-weight-bold);
+
+  --dh-type-margin: 40px;
+
+  /**
+   * Inputs (Text, Select, Options)
+   */
+
+  --dh-input-font-family: var(--dh-font-family-primary);
+  --dh-input-background: var(--dh-color-background);
+
+  /**
+   * Buttons
+   */
+
+  --dh-button-color: var(--dh-color-primary);
+  --dh-button-font-weight: var(--dh-font-weight-primary-bold);
+  --dh-button-background: var(--dh-color-background);
+  --dh-button-border: var(--dh-color-primary);
+
+  --dh-button-primary-color: var(--dh-color-background);
+  --dh-button-primary-background: var(--dh-color-primary);
+  --dh-button-primary-border: var(--dh-color-primary);
+
+  --dh-button-color-hover: var(--dh-color-background);
+  --dh-button-background-hover: var(--dh-color-text);
+}
+
+/**
+ * Dark Mode
+ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dh-color-black: #222b30;
+    --dh-color-black-t1: #283339;
+
+    --dh-color-white: var(--dh-color-white-t1);
+    /* --dh-color-primary: var(--dh-color-primary); */
+
+    --dh-color-background: var(--dh-color-black);
+    --dh-color-background-t1: var(--dh-color-black-t1);
+    --dh-color-text: var(--dh-color-white);
+
+    --dh-font-webkit-smoothing: antialiased;
+    --dh-font-moz-smoothing: grayscale;
+  }
+}
