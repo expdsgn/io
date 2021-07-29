@@ -1,0 +1,116 @@
+@import url('../../tokens.css');
+
+:root {
+  /**
+   * Color
+   */
+
+  --dh-color-black: #455d68;
+  --dh-color-black-t1: #2e4149;
+
+  --dh-color-red: #dd3335;
+  --dh-color-white: #fdfeff;
+  --dh-color-white-t1: #eff7ff;
+
+  --dh-color-primary: var(--dh-color-red);
+
+  --dh-color-text: var(--dh-color-black);
+  --dh-color-background: var(--dh-color-white);
+  --dh-color-background-t1: var(--dh-color-white-t1);
+  --dh-color-hyperlinks: var(--dh-color-primary);
+  --dh-color-focus: var(--dh-color-primary);
+
+  /**
+   * Typography
+   */
+
+  --dh-font-family-primary: 'Inter var', sans-serif;
+  --dh-font-weight-primary-normal: 400;
+  --dh-font-weight-primary-bold: 700;
+  /* https://rsms.me/inter/lab/ */
+  --dh-font-features-primary: 'case' 0, 'cpsp', 'dlig' 0, 'frac', 'dnom' 0, 'numr' 0, 'salt' 0, 'subs' 0, 'sups' 0, 'tnum' 1, 'zero', 'ss01' 0, 'ss02', 'ss03' 0, 'ss04' 0, 'cv01', 'cv02', 'cv03', 'cv04', 'cv05' 0, 'cv06', 'cv07' 0, 'cv08' 0, 'cv09', 'cv10', 'cv11' 0, 'calt' 0, 'ccmp' 1, 'kern' 1;
+  /* --dh-line-height-primary: 1.8; */
+
+  --dh-font-family-secondary: 'Work Sans', sans-serif;
+  --dh-font-weight-secondary-normal: 400
+  --dh-font-weight-secondary-bold: 700;
+  --dh-font-features-secondary: 'case' 0, 'cpsp', 'dlig' 0, 'frac' 0, 'dnom' 0, 'numr' 0, 'salt' 0, 'subs' 0, 'sups' 0, 'tnum' 1, 'zero', 'ss01' 0, 'ss02', 'ss03' 0, 'ss04' 0, 'cv01', 'cv02', 'cv03', 'cv04', 'cv05' 0, 'cv06', 'cv07' 0, 'cv08' 0, 'cv09', 'cv10', 'cv11' 0, 'calt' 0, 'ccmp' 1, 'kern' 1;
+  /* --dh-line-height-secondary: 1.2; */
+
+  --dh-font-size: 18px;
+  --dh-line-height: 1.6;
+  --dh-letter-spacing: 0;
+  --dh-font-family: var(--dh-font-family-primary);
+  --dh-font-features: var(--dh-font-features-primary);
+
+  --dh-font-webkit-smoothing: auto;
+  --dh-font-moz-smoothing: auto;
+
+  --dh-font-weight-normal: 400;
+  --dh-font-weight-bold: 700;
+
+  --dh-font-size-h1: 4em;
+  --dh-font-size-h2: 3.33em;
+  --dh-font-size-h3: 2em;
+  --dh-font-size-h4: 1.66em;
+  --dh-font-size-h5: 1.33em;
+  --dh-font-size-h6: 1em;
+
+  --dh-font-family-headings: var(--dh-font-family-primary);
+  --dh-line-height-headings: 1.2;
+  --dh-font-weight-headings: var(--dh-font-weight-bold);
+
+  --dh-font-size-blockquote: 3.33em;
+  --dh-font-family-blockquote: var(--dh-font-family-secondary);
+  --dh-line-height-blockquote: 1.2;
+
+  --dh-font-size-small: 0.875em;
+
+  --dh-font-weight-hyperlinks: var(--dh-font-weight-bold);
+
+  --dh-type-margin: 40px;
+
+  /**
+   * Inputs (Text, Select, Options)
+   */
+
+  --dh-input-font-family: var(--dh-font-family-primary);
+  --dh-input-background: var(--dh-color-background);
+
+  /**
+   * Buttons
+   */
+
+  --dh-button-color: var(--dh-color-primary);
+  --dh-button-font-weight: var(--dh-font-weight-primary-bold);
+  --dh-button-background: var(--dh-color-background);
+  --dh-button-border: var(--dh-color-primary);
+
+  --dh-button-primary-color: var(--dh-color-background);
+  --dh-button-primary-background: var(--dh-color-primary);
+  --dh-button-primary-border: var(--dh-color-primary);
+
+  --dh-button-color-hover: var(--dh-color-background);
+  --dh-button-background-hover: var(--dh-color-text);
+}
+
+/**
+ * Dark Mode
+ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dh-color-black: #222b30;
+    --dh-color-black-t1: #283339;
+
+    --dh-color-white: var(--dh-color-white-t1);
+    /* --dh-color-primary: var(--dh-color-primary); */
+
+    --dh-color-background: var(--dh-color-black);
+    --dh-color-background-t1: var(--dh-color-black-t1);
+    --dh-color-text: var(--dh-color-white);
+
+    --dh-font-webkit-smoothing: antialiased;
+    --dh-font-moz-smoothing: grayscale;
+  }
+}

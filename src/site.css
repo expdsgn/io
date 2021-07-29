@@ -1,0 +1,52 @@
+@import url('../../styles/font-face-inter.css');
+@import url('../../styles/font-face-work-sans.css');
+
+@import url('./tokens.css');
+
+/**
+ * Shared
+ */
+
+@import url('../../styles/base.css');
+@import url('../../styles/body.css');
+@import url('../../styles/animate.css');
+@import url('../../styles/typography.css');
+@import url('../../styles/hyperlinks.css');
+@import url('../../styles/highlights.css');
+@import url('../../styles/dividers.css');
+@import url('../../styles/inputs.css');
+@import url('../../styles/options.css');
+@import url('../../styles/buttons.css');
+@import url('../../styles/selects.css');
+@import url('../../styles/labels.css');
+@import url('../../styles/focus.css');
+@import url('../../styles/icons.css');
+@import url('../../styles/figures.css');
+@import url('../../styles/tables.css');
+@import url('../../styles/first-last.css');
+@import url('../../styles/utilities.css');
+@import url('../../styles/print.css');
+
+.footer {
+  position: sticky;
+  inset-block-end: 0;
+}
+
+.nav-side {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+}
+
+.nav-side > * {
+  display: block;
+  margin-block-end: var(--dh-space-4)
+}
+
+.nav-side > *:last-child {
+  margin-block-end: 0
+}
+
+.nav-side > * > svg {
+  display: block;
+}
