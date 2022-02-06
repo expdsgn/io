@@ -1,0 +1,65 @@
+---
+title: 'hellosmile | Work | exp. design'
+layout: 'layouts/default.pug'
+breadcrumbs: ['Work', 'hellosmile']
+---
+
+section(class='px-5 tablet:px-8 max-w-large pb-8 mb-8 xlarge:mx-auto')
+  h2(class='sr-only') hellosmile
+
+  div(class='pb-3 mb-6')
+    div(class='relative overflow-hidden text-center mb-6' style='height: 400px; background-color: #FE4682')
+      img(src='/img/hellosmile.logo.svg' width='106' height='67' class='inline-block pt-4')
+
+      img(class='absolute bottom-0' src='/img/hellosmile.thumb.png' width='350' height='350' style='margin-left: -175px; margin-bottom: -78px; left: 50%;')
+
+    div
+      p hellosmile is a dental practice management group that provides innovative and compassionate community healthcare. I worked with hellosmile to assist the primary users of their website (parents, providers, and change-makers) in finding the information they need when visiting their site. I did this by redesigning and developing the homepage experience as well as producing additional landing page designs using the existing brand identity.
+
+      h3 Homepage Experience
+
+      figure(class='figure')
+        div(class='figure__matte flex items-center justify-center p-4 tablet:p-8 bg-t1' style='height: auto')
+          img(class='mx-auto' src='/img/hellosmile-landing.png' loading='lazy' decoding='async' width='1440' height='3674' alt='Screenshot of the hellosmile.com website.')
+        figcaption(class='static') The homepage of the hellosmile.com website.
+
+      figure(class='figure')
+        div(class='figure__matte flex items-center justify-center tablet:p-6 pb-0 bg-t1' style='height: auto')
+          iframe(class='iframe w-full' height='700' src='/hellosmile/')
+
+        figcaption(class='static')
+          p The static HTML page I created for the homepage.
+          p <a class="btn btn-primary" href="/hellosmile/" target="_blank" rel="noopener nofollow">View the full page <svg class="icon mis-half" aria-hidden="true"><use xlink:href="#tabler-external-link"></use></svg></a>
+
+      h3 Clinics Page
+
+      figure(class='figure')
+        div(class='figure__matte flex items-center justify-center p-4 tablet:p-8 bg-t1' style='height: auto')
+          img(class='mx-auto' src='/img/hellosmile-our-clinics.png' loading='lazy' decoding='async' width='1440' height='3873' alt='Screenshot of the clinics overview page.')
+        figcaption(class='static') The overview page for hellosmile clinics.
+
+      div(class='tablet:flex justify-between items-center mb-4')
+        h3(class='tablet:m-0') Clinic Search Flow
+
+        span(class='flex items-center')
+          span(class='mie-1') Scroll horizontally to see more
+          svg(class='icon' aria-hidden='true')
+            use(xlink:href='#tabler-arrow-bar-right')
+
+      figure(class='figure figure-scroll')
+        div(class='figure__matte h-auto' style='background-color: #EFEFEF')
+          div(class='small p-3 bg-t1')
+            p <b>Step 1: Clinic search page</b>
+          img(class='block' src='/img/hellosmile-search-flow-a.png' loading='lazy' decoding='async' alt='Screenshot of the first step of the clinic finder flow featuring a clinic listing and map view. It uses a zip code input field to determine the view point of the map.')
+
+        div(class='figure__matte h-auto' style='background-color: #EFEFEF')
+          div(class='small p-3 bg-t1')
+            p <b>Step 2: Patient and appointment details</b>
+          img(class='block' src='/img/hellosmile-search-flow-b.png' loading='lazy' decoding='async' alt='Screenshot of the second step of the clinic finder where a patient enters their personal information.')
+
+        div(class='figure__matte h-auto' style='background-color: #EFEFEF')
+          div(class='small p-3 bg-t1')
+            p <b>Step 3: Additional appointment details</b>
+          img(class='block' src='/img/hellosmile-search-flow-c.png' loading='lazy' decoding='async' alt='Screenshot of the third step of the clinic finder where a patient enters appointment details.')
+
+      a(href='/work' class='btn btn-primary') Back to work

@@ -1,18 +1,11 @@
 ---
 title: 'About | exp. design'
-layout: '../../../_includes/layouts/exp.pug'
+layout: 'layouts/default.pug'
+breadcrumbs: ['About']
 ---
 
 <section class="px-5 tablet:px-8 max-w-large pb-8 mb-8 xlarge:mx-auto">
-  <header>
-    <h2 class="small border-b border-t1 pb-2 mb-4">
-      <a id="about" href="#about" class="flex mis--4 mie-1 no-underline">
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#tabler-hash"></use>
-        </svg>
-      </a> About
-    </h2>
-  </header>
+  <h2 class="sr-only">About</h2>
 
   <blockquote>exp. design's mission is to create outstanding digital experiences for social impact organizations using research, strategy, design, and technology.</blockquote>
 

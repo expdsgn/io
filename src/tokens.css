@@ -37,38 +37,15 @@
   --dh-font-features-secondary: 'case' 0, 'cpsp', 'dlig' 0, 'frac' 0, 'dnom' 0, 'numr' 0, 'salt' 0, 'subs' 0, 'sups' 0, 'tnum' 1, 'zero', 'ss01' 0, 'ss02', 'ss03' 0, 'ss04' 0, 'cv01', 'cv02', 'cv03', 'cv04', 'cv05' 0, 'cv06', 'cv07' 0, 'cv08' 0, 'cv09', 'cv10', 'cv11' 0, 'calt' 0, 'ccmp' 1, 'kern' 1;
   /* --dh-line-height-secondary: 1.2; */
 
-  --dh-font-size: 18px;
-  --dh-line-height: 1.6;
-  --dh-letter-spacing: 0;
   --dh-font-family: var(--dh-font-family-primary);
   --dh-font-features: var(--dh-font-features-primary);
 
-  --dh-font-webkit-smoothing: auto;
-  --dh-font-moz-smoothing: auto;
-
-  --dh-font-weight-normal: 400;
-  --dh-font-weight-bold: 700;
-
-  --dh-font-size-h1: 4em;
-  --dh-font-size-h2: 3.33em;
-  --dh-font-size-h3: 2em;
-  --dh-font-size-h4: 1.66em;
-  --dh-font-size-h5: 1.33em;
-  --dh-font-size-h6: 1em;
-
   --dh-font-family-headings: var(--dh-font-family-primary);
-  --dh-line-height-headings: 1.2;
   --dh-font-weight-headings: var(--dh-font-weight-bold);
 
-  --dh-font-size-blockquote: 3.33em;
   --dh-font-family-blockquote: var(--dh-font-family-secondary);
-  --dh-line-height-blockquote: 1.2;
-
-  --dh-font-size-small: 0.875em;
 
   --dh-font-weight-hyperlinks: var(--dh-font-weight-bold);
-
-  --dh-type-margin: 40px;
 
   /**
    * Inputs (Text, Select, Options)

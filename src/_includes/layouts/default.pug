@@ -1,0 +1,31 @@
+doctype html
+html(dir='ltr' lang='en')
+  head
+    include /../../../_includes/partials/head.pug
+
+  body(class='')
+    include /partials/header.pug
+
+    main
+      if breadcrumbs
+        div(class='px-5 tablet:px-8 max-w-large xlarge:mx-auto')
+          nav(class='small border-b border-t1 pb-2 mb-4' aria-label='Breadcrumb')
+            a(href='/') Home
+
+            span(class='px-1') /
+
+            each crumb, i in breadcrumbs
+              - if (i > 0)
+                span(class='px-1') /
+
+              if (i < breadcrumbs.length - 1)
+                a(href=`/${breadcrumbs.slice(0, i + 1).join('/').split(' ').join('-').toLowerCase()}`)
+                  = crumb
+              else
+                a(href='#' aria-current='page')
+                  = crumb
+
+      != content
+
+    include /partials/footer.pug
+    include /../../../_includes/partials/sprite.pug
