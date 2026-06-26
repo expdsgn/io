@@ -7,7 +7,7 @@
 * [LinkedIn](https://www.linkedin.com/company/expdsgn)
 * [Behance](https://www.behance.net/expdsgn)
 
-devon@expdesign.io
+ellie@expdesign.io
 
 ## Start
 
