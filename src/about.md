@@ -9,7 +9,7 @@ breadcrumbs: ['About']
 
   <blockquote>exp. design's mission is to create outstanding digital experiences for social impact organizations using research, strategy, design, and technology.</blockquote>
 
-  My name is [Ellie Hirth](https://www.linkedin.com/in/elliehirth) and my digital product experience ranges from human-centered design research to prototyping, engineering, and market delivery. Currently, I'm working with [The Mayor's Office for Economic Opportunity](nyc.gov/opportunity) (NYC Opportunity), part of the Mayor's Office of Operations, which works to reduce poverty and broaden opportunities for New York City residents. As a designer and engineer, I have come up against many creative and technical challenges, and I derive a great deal of satisfaction overcoming them. One design practice that I value the most is listening to people and enabling them to solve their most significant challenges.
+  My name is [Ellie Hirth](https://www.linkedin.com/in/elliehirth) and my digital product experience ranges from human-centered design research to prototyping, engineering, and market delivery. Currently, I'm working with <a href="https://codeforamerica.org" target="_blank" rel="noindex nofollow">Code for America</a> in the Safety Net Innovation Lab. As a designer and engineer, I have come up against many creative and technical challenges, and I derive a great deal of satisfaction overcoming them. One design practice that I value the most is listening to people and enabling them to solve their most significant challenges.
 
   Find out more about me from my [personal site](https://elliehirth.com) or on [LinkedIn](https://www.linkedin.com/in/elliehirth).
 
